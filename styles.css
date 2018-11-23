@@ -278,21 +278,21 @@ p.center {
     height: 250px;
 }
 
-q {
+.heart-divider p {
     width: 33vw;
-    font-size: 18px;
-    line-height: 19px;
+    font-size: 19px;
+    line-height: 25px;
     font-style: italic;
     color: #eaeaea;
     letter-spacing: 0.03em;
-    margin-left: -14vw;
+    transform: translateX(-33%);
 }
 
 .heart-divider {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('assets/divider-heart.jpeg') top left / cover no-repeat;
+    background: url('assets/divider-heart-colored.jpg') top left / cover no-repeat;
 }
 
 .event {
