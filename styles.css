@@ -253,6 +253,27 @@ p.center {
     background-color: #fff;
 }
 
+.logo-wrapper {
+  position: relative;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.category-name {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  color: white;
+  font-weight: bold;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.category-name.two-lines {
+  top: 42%;
+}
+
 .category-grid-3 .category-logo {
     top: 50%;
     left: calc(7/12 * 100%);
