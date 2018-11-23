@@ -9,6 +9,6 @@ button.addEventListener('click', e => {
 
   window.fetch(`${url}?email=${input.value}`, {
     method: 'get',
-    mode: "cors", // no-cors, cors, *same-origin
+    mode: "cors",w // no-cors, cors, *same-origin
   }).then(resp => console.log(resp)).catch(e => console.log(e))
 })
