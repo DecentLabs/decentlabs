@@ -251,6 +251,7 @@ p.center {
     padding-bottom: 24%;
     border-radius: 100%;
     background-color: #fff;
+    z-index: 100;
 }
 
 .logo-wrapper {
