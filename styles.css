@@ -1,7 +1,7 @@
 :root {
     --text-color: #020202;
     --darkgrey: #2b2b2b;
-    --yellow: #FDE14C;
+    --yellow: #f2fd48;
     --row-height: 320px;
     --gap-size: 30px;
 }
@@ -12,10 +12,17 @@ body {
     padding: 0;
     color: var(--text-color);
     font-family: 'Dosis', sans-serif;
+    overflow-x: hidden;
 }
 
 h1, h2 {
     text-transform: uppercase;
+}
+
+
+a, a:visited {
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 img {
@@ -33,6 +40,7 @@ header {
     width: 100%;
     height: 100vh;
     max-height: 760px;
+    background-color: var(--text-color);
 }
 
 main {
@@ -42,10 +50,13 @@ main {
 }
 
 #hero-title {
+    width: 220px;
     padding-left: 120px;
     font-size: 66px;
     font-weight: 500;
     line-height: 1.26;
+    color: #fff;
+    text-align: center;
     z-index: 2;
 }
 
@@ -64,22 +75,22 @@ main {
     justify-content: center;
     width: 360px;
     height: 360px;
-    background-color: var(--darkgrey);
+    background-color: var(--yellow);
     border-radius: 100%;
     z-index: 2;
     transform: translate(33%, -50%);
 }
 
+
 #main-nav a {
     display: block;
     padding: 5px 0;
+    margin-right: 45%;
     font-size: 26px;
     line-height: 1.3;
-    color: #fff;
+    font-weight: 700;
     text-align: right;
-    margin-right: 50%;
     text-transform: uppercase;
-    text-decoration: none;
     transition: opacity .4s;
 }
 
@@ -91,8 +102,20 @@ main {
     position: absolute;
     top: 0;
     left: 0;
+    width: 105vw;
+    height: 105vw;
     z-index: 0;
-    opacity: 0.4;
+    opacity: .9;
+    transform: translate(-38%, -24%);
+}
+
+#header .halftone-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 section {
@@ -102,6 +125,20 @@ section {
     width: 100%;
     max-width: 960px;
     margin-bottom: 70px;
+}
+
+#intro {
+    padding: 40px;
+    margin: 0;
+    justify-content: flex-end;
+}
+
+#intro p {
+    width: 45%;
+    margin: 0;
+    font-size: 22px;
+    letter-spacing: 0.07em;
+    text-align: right;
 }
 
 .section-title {
@@ -169,8 +206,14 @@ section {
     right: 0;
     padding: 10px;
     margin: 0;
+    z-index: 2;
     color: #fff;
+    letter-spacing: 0.02em;
     background-color: var(--darkgrey);
+}
+
+p.center {
+    text-align: center;
 }
 
 .experiment-item.left h2 {
@@ -181,6 +224,25 @@ section {
 .experiment-item.right h2 {
     right: 0;
 }
+
+.experiment-item::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 1;
+    background-color: var(--yellow);
+    mix-blend-mode: overlay;
+    transition: opacity .2s;
+}
+
+.experiment-item:hover::after {
+    opacity: 0.5;
+}
+
 
 .category-logo {
     position: absolute;
@@ -224,6 +286,11 @@ q {
     background: url('assets/divider-heart.jpeg') top left / cover no-repeat;
 }
 
+.event {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
 .event h2 {
     font-size: 24px;
     line-height: 30px;
@@ -231,13 +298,13 @@ q {
 
 .event .img-row {
     display: flex;
-    flex-flow: row wrap;
     width: 100%;
     height: 210px;
 }
 
 .event .img-row.four img{
-    width: 25%;
+    flex: 1 1 auto;
+    width: auto;
     height: 100%;
     object-fit: cover;
 }
