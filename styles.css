@@ -120,8 +120,6 @@ main {
 }
 
 
-
-
 section {
     display: flex;
     justify-content: center;
@@ -211,21 +209,35 @@ section {
     padding: 10px;
     margin: 0;
     z-index: 2;
+    font-family: 'Open Sans', sans-serif;
     color: #fff;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.01em;
     background-color: var(--darkgrey);
+}
+
+.experiment-link {
+    position: absolute;
+    top: 44px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    z-index: 10;
+    text-align: center;
+    background-color: var(--darkgrey);
+    box-sizing: border-box;
 }
 
 p.center {
     text-align: center;
 }
 
-.experiment-item.left h3 {
+.experiment-item.left h3,
+.experiment-item.left .experiment-link {
     left: 0;
 }
 
-
-.experiment-item.right h3 {
+.experiment-item.right h3,
+.experiment-item.right .experiment-link {
     right: 0;
 }
 
@@ -409,6 +421,7 @@ footer form label {
     color: #fff;
     font-size: 18px;
     line-height: 1.3;
+    letter-spacing: 0.02em;
 }
 
 footer form input,
@@ -418,12 +431,15 @@ footer form button {
     border: none;
     margin-left: 30px;
     font-size: 18px;
+    letter-spacing: 0.02em;
     box-sizing: border-box;
 }
 
 footer form input {
     width: 320px;
+    font-family: inherit;
 }
+
 
 footer form button {
     padding: 10px 20px;
