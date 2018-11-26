@@ -2,6 +2,7 @@
     --text-color: #020202;
     --black: #0D1112;
     --darkgrey: #2b2b2b;
+    --lightgrey: #4b4b4b;
     --yellow: #f1f848;
     --row-height: 320px;
     --gap-size: 30px;
@@ -18,6 +19,10 @@ body {
 
 h1, h2, h3 {
     text-transform: uppercase;
+}
+
+h1 span, h2 span, h3 span {
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -215,9 +220,9 @@ section {
     background-color: var(--darkgrey);
 }
 
-.experiment-link {
+.more-link {
     position: absolute;
-    top: 44px;
+    top: 0;
     width: 40px;
     height: 40px;
     padding: 10px;
@@ -225,19 +230,40 @@ section {
     text-align: center;
     background-color: var(--darkgrey);
     box-sizing: border-box;
+    transition: background-color .2s;
+}
+
+.more-link:hover {
+    background-color: var(--lightgrey);
+}
+
+
+.more-link::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('assets/more-link.svg') center / contain no-repeat transparent;
 }
 
 p.center {
     text-align: center;
 }
 
+.experiment-item .more-link {
+    top: 44px;
+}
+
 .experiment-item.left h3,
-.experiment-item.left .experiment-link {
+.experiment-item.left .more-link {
     left: 0;
 }
 
 .experiment-item.right h3,
-.experiment-item.right .experiment-link {
+.experiment-item.right .more-link {
     right: 0;
 }
 
@@ -310,14 +336,54 @@ p.center {
     background: url('assets/divider-heart-colored.jpg') top left / cover no-repeat;
 }
 
+#happenings h2 {
+    width: 100%;
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.event-upcoming {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background: rgba(241, 248, 72, 0.71);
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+}
+
 .event {
     width: 100%;
     margin-bottom: 30px;
 }
 
-.event h2 {
+.event-upcoming .event {
+    width: 66%;
+    max-width: 66%;
+    /*border-bottom: 1px solid var(--text-color);*/
+}
+
+.event-upcoming h3 {
+    margin-bottom: 10px;
+}
+
+.event-upcoming a {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.event-upcoming a:hover {
+    color: var(--lightgrey)
+}
+
+.event h3 {
     font-size: 24px;
     line-height: 30px;
+    font-weight: 500;
 }
 
 .event .img-row {
@@ -326,15 +392,19 @@ p.center {
     height: 210px;
 }
 
-.event-img {
+.event .img-row .event-img {
     position: relative;
+    height: 100%;
+    flex: 1 1 auto;
 }
 
 .event .img-row.four .event-img {
-    flex: 1 1 auto;
-    height: 100%;
+    width: 25%;
 }
 
+.event .img-row.three .event-img {
+    width: calc(1/3 * 100%);
+}
 
 .experiment-item::after,
 .event-img::after {
