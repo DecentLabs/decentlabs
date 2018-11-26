@@ -35,19 +35,21 @@ img {
 
 header {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     width: 100%;
     height: 100vh;
     max-height: 760px;
     background-color: var(--black);
 }
 
-main {
+.header-inner {
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #hero-title {
@@ -110,14 +112,15 @@ main {
     transform: translate(-38%, -24%);
 }
 
-.halftone-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
 }
+
+
+
 
 section {
     display: flex;
