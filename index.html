@@ -5,7 +5,7 @@
   <title>Decent Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="icon" href="/favicon.png">
-  <link href="//fonts.googleapis.com/css?family=Dosis:400,500,700" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Dosis:400,500,700" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="home-page">
@@ -122,18 +122,18 @@
 </main>
 <footer id="contact">
   <div class="footer-inner">
+      <form id="subscribe-form" target="subscribe-frame" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLScnXk-SXv57FQtghncAogPaL_MDkB03hNpkzmH2chlKPsvF_g/formResponse">
+        <label>Do you want to<br>hear about us?</label>
+        <input type="email" placeholder="Add your email">
+        <button type="submit" id="subscribe-btn">Subscribe</button>
+      </form>
+      <p id="success-msg">Thanks for subscribing!</p>
       <p>Contact us: <a href="mailto:hello@decent.org">hello@decent.org</a></p>
-      <form id="subscribe-form">
-      <label>
-        Contact us:
-        <input type="email" placeholder="Your email">
-      </label>
-      <button type="submit" id="subscribe-btn">Subscribe</button>
-    </form>
   </div>
   <img src="assets/footer-halftone.svg">
 
 </footer>
+<iframe name="subscribe-frame" src="https://docs.google.com/forms/d/e/1FAIpQLScnXk-SXv57FQtghncAogPaL_MDkB03hNpkzmH2chlKPsvF_g/viewform?embedded=true" width="640" height="452" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 <script src="subscribe.js"></script>
 </body>
 </html>

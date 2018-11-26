@@ -345,6 +345,7 @@ footer {
     position: relative;
     width: 100%;
     height: 120px;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -383,7 +384,20 @@ footer form {
     display: flex;
     width: 100%;
     max-width: 960px;
+}
+
+.footer-inner {
     height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+footer form,
+#success-msg {
+    height: 50px;
+    margin-bottom: 20px;
     justify-content: flex-end;
     align-items: center;
 }
@@ -391,11 +405,12 @@ footer form {
 footer form label {
     color: #fff;
     font-size: 18px;
+    line-height: 1.3;
 }
 
 footer form input,
 footer form button {
-    height: 50px;
+    height: 100%;
     padding: 10px;
     border: none;
     margin-left: 30px;
@@ -412,4 +427,13 @@ footer form button {
     text-align: center;
     font-family: inherit;
     background-color: #efefef;
+}
+
+#success-msg {
+    display: none;
+    line-height: 50px;
+}
+
+iframe {
+    display: none;
 }
