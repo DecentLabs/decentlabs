@@ -1,3 +1,3 @@
 # decentlabs
 
-[test!](euedge.github.io/decentlabs/)
+[test!](https://euedge.github.io/decentlabs/)
