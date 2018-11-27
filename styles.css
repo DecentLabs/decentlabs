@@ -6,6 +6,7 @@
     --yellow: #f1f848;
     --row-height: 320px;
     --gap-size: 30px;
+    --form-size: 320px;
 }
 
 body {
@@ -360,6 +361,7 @@ p.center {
 }
 
 #happenings h2 {
+    width: 100%;
     font-size: 28px;
     line-height: 36px;
     text-align: center;
@@ -367,78 +369,121 @@ p.center {
     overflow: hidden;
 }
 
-.event-upcoming {
+#event-upcoming {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: relative;
     padding: 20px;
-    background: rgba(241, 248, 72, 0.71);
+    background: var(--yellow);
     box-sizing: border-box;
     margin-bottom: 30px;
     overflow: hidden;
 }
 
-#happenings form {
+#event-upcoming .form-column {
+    position: relative;
+    width: var(--form-size);
+    height: var(--form-size);
+    left: -80px;
+    border-radius: 50%;
+    background-color: var(--darkgrey);
+    box-sizing: border-box;
+}
+
+#event-upcoming .events-column {
+    flex: 1 1 auto;
     display: flex;
-    width: 50%;
     flex-direction: column;
+    justify-content: center;
 }
 
-#happenings form label {
+#event-upcoming .event:not(:last-of-type) {
+    border-bottom: 1px solid var(--text-color);
+}
+
+#event-upcoming a {
+    display: block;
     font-size: 18px;
-    line-height: 1.3;
-    letter-spacing: 0.02em;
+    margin-bottom: 20px;
 }
 
-#happenings form input,
-#happenings form button {
+#event-upcoming a:hover {
+    color: var(--lightgrey)
+}
+
+
+#subscribe-form {
+    display: flex;
     height: 100%;
-    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 30px 50px;
+}
+
+
+#subscribe-form label {
+    width: 75%;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    color: #fff;
+    letter-spacing: 0.02em;
+    text-align: right;
+}
+
+#subscribe-form input,
+#subscribe-form button {
+    font-family: inherit;
+    height: 45px;
     border: none;
-    margin-left: 30px;
     font-size: 18px;
     letter-spacing: 0.02em;
     box-sizing: border-box;
 }
 
-#happenings form input {
-    width: 320px;
-    font-family: inherit;
+#subscribe-form input {
+    max-width: 220px;
+    padding: 10px;
+    text-align: right;
 }
 
-
-#happenings form button {
+#subscribe-form button {
+    max-width: 180px;
+    margin-top: 20px;
     padding: 10px 20px;
     text-align: center;
-    font-family: inherit;
-    background-color: #efefef;
+    color: #efefef;
+    border: 1px solid #efefef;
+    background: transparent;
+    cursor: pointer;
 }
 
-#success-msg {
+#subscribe-form button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.form-column #success-msg {
     display: none;
-    line-height: 50px;
+    height: var(--form-size);
+    margin: 0 30px;
+    text-align: right;
+    line-height: var(--form-size);
+    color: #fff;
+    font-size: 22px;
 }
-
 
 .event {
     margin-bottom: 30px;
     overflow: hidden;
 }
 
-.event-upcoming .event {
-    /*border-bottom: 1px solid var(--text-color);*/
-}
-
-.event-upcoming h3 {
-    margin-bottom: 10px;
-}
-
-.event-upcoming a {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.event-upcoming a:hover {
-    color: var(--lightgrey)
+.event:only-child {
+    margin: 0;
 }
 
 .event h3 {
@@ -537,16 +582,6 @@ footer img {
     justify-content: center;
     align-items: flex-end;
 }
-
-
-#success-msg {
-    height: 50px;
-    margin-bottom: 20px;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-
 iframe {
     display: none;
 }
