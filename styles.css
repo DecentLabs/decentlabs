@@ -230,20 +230,13 @@ section {
 }
 
 .more-link {
-  position: absolute;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  z-index: 10;
-  text-align: center;
-  background-color: var(--darkgrey);
-  box-sizing: border-box;
-  transition: background-color .2s;
+  display:inline-block;
+  height:100%;
 }
 
-.more-link:hover {
+.more-link::after:hover {
   background-color: var(--lightgrey);
+  border-color: var(--lightgrey);
 }
 
 .more-link::after {
@@ -254,15 +247,25 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: url('assets/more-link.svg') center / contain no-repeat transparent;
+  background: url('assets/more-link.svg') center / contain no-repeat var(--darkgrey);
+  border: 10px solid var(--darkgrey);
+  z-index: 2;
+}
+
+.more-link.left::after {
+  left:0;
+  transform: translate(0, 0);
+  top:100%;
+}
+.more-link.right::after {
+  left:auto;
+  right:0;
+  transform: translate(0, 0);
+  top:100%;
 }
 
 p.center {
   text-align: center;
-}
-
-.experiment-item .more-link {
-  top: 44px;
 }
 
 .category-logo {
