@@ -279,6 +279,14 @@ p.center {
     border-radius: 100%;
     background-color: #fff;
     z-index: 100;
+    overflow: hidden;
+}
+
+.category-logo > img {
+    position: absolute;
+    top:0;
+    left:0;
+
 }
 
 .logo-wrapper {
