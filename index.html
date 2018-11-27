@@ -127,22 +127,21 @@
   </section>
   <section id="happenings">
     <h1 class="section-title">What's happening?</h1>
-    <div class="event-upcoming">
+    <div id="event-upcoming">
       <h2>Upcoming events</h2>
-      <div class="event">
-        <h3>Decent Workshop <span>@</span>Brooklyn NYC<br>// Dec 1 2018 </h3>
-        <a href="http://www.decent.org/workshop.html" target="_blank">View more details >>></a>
+      <div class="form-column">
+        <form id="subscribe-form">
+          <label>Do you want to be updated about us?</label>
+          <input type="email" name="email" placeholder="Add your email">
+          <button type="submit" id="subscribe-btn">Subscribe</button>
+        </form>
+        <p id="success-msg">Thanks for subscribing!</p>
       </div>
-      <div class="event">
-        <h3>Decent Workshop <span>@</span>Brooklyn NYC<br>// Dec 1 2018 </h3>
-        <a href="http://www.decent.org/workshop.html" target="_blank">View more details >>></a>
+      <div class="events-column">
+        <div class="event">
+          <h3>We have no upcoming events at the moment.</h3>
+        </div>
       </div>
-      <form id="subscribe-form" target="subscribe-frame" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLScnXk-SXv57FQtghncAogPaL_MDkB03hNpkzmH2chlKPsvF_g/formResponse">
-        <label>Do you want to hear from us?</label>
-        <input type="email" placeholder="Add your email">
-        <button type="submit" id="subscribe-btn">Subscribe</button>
-      </form>
-      <p id="success-msg">Thanks for subscribing!</p>
     </div>
     <h2>Past events</h2>
     <div class="event">
@@ -218,7 +217,7 @@
   <img src="assets/footer-halftone.svg">
 
 </footer>
-<iframe name="subscribe-frame" src="https://docs.google.com/forms/d/e/1FAIpQLScnXk-SXv57FQtghncAogPaL_MDkB03hNpkzmH2chlKPsvF_g/viewform?embedded=true" width="640" height="452" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+<iframe name="subscribe-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSeYHOaZvdM6vMgpOaXsHBOtLjYVRq-fYuYnnz9XtwKqKKcrkQ/viewform?embedded=true" width="640" height="452" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 <script src="subscribe.js"></script>
 </body>
 </html>
