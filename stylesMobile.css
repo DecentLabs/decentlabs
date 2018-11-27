@@ -1,5 +1,10 @@
 
 @media (max-width: 599px) {
+  :root {
+    --logo-size: 200px;
+    --row-height: 320px;
+  }
+
   #main-nav {
     width: 275px;
     height: 275px;
@@ -39,28 +44,30 @@
   }
 
   #intro {
-    padding: 30px 30px 20px 30px;
+    padding: 40px 40px 30px 40px;
   }
 
   #intro p {
     width: 100%;
-    text-align: center;
+    text-align: left;
     font-size: 18px;
+    line-height: 1.35em;
+    margin-bottom: 10px;
   }
 
-  #experiments {
-    /* justify-content: flex-start; */
+  section {
+    padding: 0;
+    text-align: center;
   }
 
   .section-title {
-    font-size: 21px;
-    margin: 30px auto 15px auto;
-    background-color: var(--yellow);
+    font-size: 24px;
+    margin: 30px auto 30px auto;
     padding: 7px 14px 7px 14px;
-    line-height: 30px;
-    width: auto;
+    line-height: 32px;
     position: relative;
-    border-bottom: 1px dashed black;
+    display: inline-block;
+    border-bottom: 1px dotted black;
   }
   .section-title:after {
     content: '';
@@ -73,59 +80,63 @@
   }
 
   .category {
-    grid-gap: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .category:after {
+    content: '';
+    width: 50%;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px dashed black;
+    bottom: -2px;
+    left: 25%;
+  }
+  .category:before {
+    content: '';
+    width: 45%;
+    position: absolute;
+    height: 1px;
+    border-bottom: 1px dotted black;
+    bottom: -1px;
+    left: 27.5%;
   }
 
-  .category-logo.grid-2, .category-logo.grid-3 {
+  .category-logo {
     position: static;
-    width: 100%;
-    height: 200px;
-    padding-bottom: 0;
-    margin: 10px auto 10px auto;
-    grid-row: 1 / 2;
+    margin: 25px auto 35px auto;
     transform: translateX(0);
+  }
+
+  .category-grid-2, .category:nth-of-type(n) .category-grid-3, .category-grid-3 .two-elem {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .two-elem .experiment-item,
+  .experiment-item,
+  .experiment-item.big,
+  .category-grid-2 .experiment-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .experiment-item p {
+    position: static;
+    color: #000;
     background-color: transparent;
-    border-radius: 0;
+    padding: 10px 20px 30px 20px;
+    line-height: 1.4em;
   }
-  .logo-wrapper {
-    height: 100%;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .category-grid-2 .category-logo {
-    grid-column: 1 / -1;
-  }
-  .category-grid-3 .category-logo {
-    grid-column: 1 / 12;
-  }
-  .category-grid-2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto var(--row-height);
-  }
-  .category-grid-3 {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto var(--row-height);
-  }
-  .category-grid-3 .experiment-item:nth-child(2) {
-      grid-row: 2 / 3;
-      grid-column: 1 / 12;
-  }
-  .category-grid-3 .experiment-item:nth-child(3) {
-      grid-row: 3 / 4;
-      grid-column: 1 / 12;
-  }
-  .category-grid-3 .experiment-item.vertical {
-    grid-column: 1 / 12;
-    grid-row: 4 / 5;
-  }
+
   .experiment-item h3 {
     font-size: 21px;
     padding: 7px 14px 7px 14px;
-    border-bottom: 1px dashed black;
+    left: 0;
+    right: auto !important; /* todo */
   }
 }
+
 
 @media (min-width: 600px) {
 
