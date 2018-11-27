@@ -319,21 +319,39 @@ p.center {
     height: 250px;
 }
 
+.heart-divider {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: url('assets/divider-heart-colored.jpg') top left / cover no-repeat;
+    flex-wrap: nowrap;
+}
+
+.heart-divider:before {
+    display: block;
+    flex: 1;
+    content: ' ';
+    min-width: var(--gap-size)
+}
+
+.heart-divider:after {
+    display: block;
+    width: 400px;
+    content: ' ';
+}
+
 .heart-divider p {
-    width: 33vw;
+    width: 476px;
     font-size: 19px;
     line-height: 25px;
     font-style: italic;
     color: #eaeaea;
     letter-spacing: 0.03em;
-    transform: translateX(-33%);
 }
 
-.heart-divider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('assets/divider-heart-colored.jpg') top left / cover no-repeat;
+.heart-divider-right {
+    flex: 1;
+    outline: 1px solid yellow;
 }
 
 #happenings h2 {
