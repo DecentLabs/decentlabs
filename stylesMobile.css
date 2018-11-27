@@ -142,8 +142,20 @@
     top:100%;
   }
 
-}
+  .heart-divider {
+    background: url(assets/divider-heart-colored_small.jpg) top right no-repeat;
+    background-size: cover;
+  }
 
+  .heart-divider p {
+    margin-right: 35%;
+    margin-left: 10px;
+    font-size: 13px;
+    text-align: left;
+    padding: 7px;
+
+  }
+}
 
 @media (min-width: 600px) {
 
