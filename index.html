@@ -5,7 +5,7 @@
   <title>Decent Lab</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="icon" href="/favicon.png">
-  <link href="http://fonts.googleapis.com/css?family=Dosis:400,500,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,700|Open+Sans" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="stylesMobile.css">
 </head>
@@ -29,21 +29,29 @@
   </section>
   <section id="experiments">
     <h1 class="section-title">Experiments</h1>
-    <div class="category category-grid-2">
+
+    <div class="category category-grid-3 left-3">
       <div class="category-logo">
         <div class="logo-wrapper">
           <img src="./assets/svg/14.svg" alt="">
           <div class="category-name two-lines">FUN</div>
         </div>
       </div>
-      <div class="experiment-item left">
+      <div class="experiment-item right">
         <img src="assets/exp-ticking.png">
-        <h3><a href="https://ticking.app/" target="_blank">Ticking</a></h3>
-        <p>Ticking is an iPhone app to improve your timing on the drums</p>
+        <h3>Ticking</h3>
+        <a class="more-link" href="https://ticking.app/" target="_blank"></a>
+        <p style="padding-left: 25%">Ticking is an iPhone app to improve your timing on the drums</p>
       </div>
       <div class="experiment-item right">
+        <img src="assets/exp-musicgenerator.png">
+        <h3>Music Generator</h3>
+        <p>A music generator for creatives by adjusting mood and intensity along a video's timeline.</p>
+      </div>
+      <div class="experiment-item left vertical">
         <img src="assets/exp-terraforming.jpeg">
-        <h3><a href="http://www.terraforming.earth/" target="_blank">Terraforming Earth</a></h3>
+        <h3>Terraforming Earth</h3>
+        <a class="more-link" href="http://www.terraforming.earth/" target="_blank"></a>
         <p>Terraforming Earth is a platform puzzler set in the not-so-distant future when one day all life disappears from the Solar System</p>
       </div>
     </div>
@@ -57,16 +65,18 @@
       <div class="experiment-item left">
         <img src="assets/exp-cryptoposition.jpg">
         <h3>Cryptoposition</h3>
-        <p>A hedge fund specialized in crypto assets and algorithmic trading</p>
+        <p style="padding-right: 20%">A hedge fund specialized in crypto assets and algorithmic trading</p>
       </div>
       <div class="experiment-item left">
         <img src="assets/exp-augmint.png">
-        <h3><a href="https://www.augmint.org/" target="_blank">Augmint</a></h3>
+        <h3>Augmint</h3>
+        <a class="more-link" href="https://www.augmint.org/" target="_blank"></a>
         <p>Augmint offers digital tokens targeted to a fiat currency. Stored securely and decentralised stable crypto tokens are instantly transferable worldwide</p>
       </div>
       <div class="experiment-item vertical right">
         <img src="assets/exp-proofoflove.jpeg">
-        <h3><a href="https://proofoflove.digital/" target="_blank">Proof of love</a></h3>
+        <h3>Proof of love</h3>
+        <a class="more-link" href="https://proofoflove.digital/" target="_blank"></a>
         <p>Carve a love message into Ethereum Blockchain. For cryptographical and economic reasons, your message stays forever</p>
       </div>
     </div>
@@ -92,11 +102,30 @@
   <section class="full-bleed heart-divider">
     <p>"A human being should be able to change a diaper, plan an invasion, butcher a hog, conn a ship, design a building, write a sonnet, balance accounts, build a wall, set a bone, comfort the dying, take orders, give orders, cooperate, act alone, solve equations, analyze a new problem, pitch manure, program a computer, cook a tasty meal, fight efficiently, die gallantly. Specialization is for insects."
       <br>— Robert Heinlein, Time Enough for Love</p>
+    <div class="heart-divider-right"></div>
   </section>
   <section id="happenings">
     <h1 class="section-title">What's happening?</h1>
+    <div class="event-upcoming">
+      <h2>Upcoming events</h2>
+      <div class="event">
+        <h3>Decent Workshop <span>@</span>Brooklyn NYC<br>// Dec 1 2018 </h3>
+        <a href="http://www.decent.org/workshop.html" target="_blank">View more details >>></a>
+      </div>
+      <div class="event">
+        <h3>Decent Workshop <span>@</span>Brooklyn NYC<br>// Dec 1 2018 </h3>
+        <a href="http://www.decent.org/workshop.html" target="_blank">View more details >>></a>
+      </div>
+      <form id="subscribe-form" target="subscribe-frame" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLScnXk-SXv57FQtghncAogPaL_MDkB03hNpkzmH2chlKPsvF_g/formResponse">
+        <label>Do you want to hear from us?</label>
+        <input type="email" placeholder="Add your email">
+        <button type="submit" id="subscribe-btn">Subscribe</button>
+      </form>
+      <p id="success-msg">Thanks for subscribing!</p>
+    </div>
+    <h2>Past events</h2>
     <div class="event">
-      <h2>Augmint</h2>
+      <h3>Augmint <span>@</span>Blockchain Budapest // Nov 8-9 2018</h3>
       <div class="img-row full-width">
         <div class="event-img">
           <img src="assets/event-augmint.jpg">
@@ -104,7 +133,24 @@
       </div>
     </div>
     <div class="event">
-      <h2>Hack week - Lab open</h2>
+      <h3>Budapest New Tech Meetup <span>@</span>Budapest // Nov 7 2018</h3>
+      <div class="img-row three">
+        <div class="event-img">
+          <a class="more-link" href="https://www.meetup.com/newtech-42/events/vzsfcqyxpbkb/" target="_blank"></a>
+          <img src="assets/event-bpnt1.png">
+        </div>
+        <div class="event-img">
+          <a class="more-link" href="https://www.youtube.com/watch?v=RsYSnjss0A4" target="_blank"></a>
+          <img src="assets/event-bpnt2.jpg">
+        </div>
+        <div class="event-img">
+          <a class="more-link" href="https://www.youtube.com/watch?v=BUuLqQb-jys" target="_blank"></a>
+          <img src="assets/event-bpnt3.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="event">
+      <h3>Hack week - Lab open <span>@</span>Budapest // Oct 1-12 2018 </h3>
       <div class="img-row four">
         <div class="event-img">
           <img src="assets/event-hw1.jpg">
@@ -120,16 +166,32 @@
         </div>
       </div>
     </div>
+    <div class="event">
+      <h3>Ethereum programming workshop <span>@</span>London // Nov 25 2017 </h3>
+      <div class="img-row four">
+        <div class="event-img">
+          <img src="assets/event-decent-ws-ldn1.jpeg">
+        </div>
+        <div class="event-img">
+          <img src="assets/event-decent-ws-ldn2.jpeg">
+        </div>
+      </div>
+    </div>
+    <div class="event">
+      <h3>Ethereum programming workshop <span>@</span>Budapest // Nov 11 2017 </h3>
+      <div class="img-row four">
+        <div class="event-img">
+          <img src="assets/event-decent-ws-bp1.jpg">
+        </div>
+        <div class="event-img">
+          <img src="assets/event-decent-ws-bp2.jpg">
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 <footer id="contact">
   <div class="footer-inner">
-      <form id="subscribe-form" target="subscribe-frame" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLScnXk-SXv57FQtghncAogPaL_MDkB03hNpkzmH2chlKPsvF_g/formResponse">
-        <label>Do you want to<br>hear about us?</label>
-        <input type="email" placeholder="Add your email">
-        <button type="submit" id="subscribe-btn">Subscribe</button>
-      </form>
-      <p id="success-msg">Thanks for subscribing!</p>
       <p>Contact us: <a href="mailto:hello@decent.org">hello@decent.org</a></p>
   </div>
   <img src="assets/footer-halftone.svg">
