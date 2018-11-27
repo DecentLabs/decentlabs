@@ -114,11 +114,6 @@ header {
 }
 
 
-main {
-
-}
-
-
 section {
     max-width: 960px;
     margin: auto;
@@ -296,15 +291,13 @@ p.center {
 }
 
 .category-grid-3.right-3 .category-logo {
-    top: 50%;
-    left: calc(7/12 * 100%);
-    transform: translate(-50%, -50%);
+    top: 37.5%;
+    left: calc(7/12 * 100% - 12.5%);
 }
 
 .category-grid-3.left-3 .category-logo {
-    top: 50%;
-    left: calc(5/12 * 100%);
-    transform: translate(-50%, -50%);
+    top: 37.5%;
+    left: calc(5/12 * 100% - 12.5%);
 }
 
 .category-grid-2 .category-logo {
