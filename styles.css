@@ -85,7 +85,7 @@ header {
   height: 360px;
   background-color: var(--yellow);
   border-radius: 100%;
-  z-index: 2;
+  z-index: 12;
   transform: translate(35%, -50%);
 }
 
@@ -113,7 +113,7 @@ header {
   height: 105vw;
   opacity: .9;
   transform-origin: center center;
-  z-index: 100;
+  z-index: 10;
   transition: transform 160s;
 }
 
