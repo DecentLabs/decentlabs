@@ -221,6 +221,12 @@
   section {
     padding: 20px;
   }
+  #intro {
+    margin-top: 40px;
+  }
+  #intro p {
+    font-size: 20px;
+  }
   .halftone-logo-main {
     top: -40vw;
     left: -40vw;
