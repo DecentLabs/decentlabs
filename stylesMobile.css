@@ -135,6 +135,37 @@
     left: 0;
     right: auto !important; /* todo */
   }
+
+  #event-upcoming {
+    padding: 10px;
+  }
+
+  #event-upcoming .form-column {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #subscribe-form {
+    align-items: center;
+  }
+
+  #subscribe-form label, #subscribe-form input {
+    text-align: center;
+  }
+
+  #subscribe-form input {
+    padding: 9px 10px;
+  }
+
+  #subscribe-form button {
+    padding: 10px 25px;
+  }
+
+  #happenings h2 {
+    font-size: 21px;
+    margin: 10px auto 20px auto;
+  }
 }
 
 
