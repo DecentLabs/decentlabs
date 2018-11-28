@@ -204,7 +204,7 @@
 /* mobile & tablet */
 @media (max-width: 1023px) {
   #intro {
-    padding: 40px 40px 30px 40px;
+    padding: 40px 40px 0 40px;
   }
 
   #intro p {
@@ -224,7 +224,7 @@
     --logo-size: 180px;
   }
   section {
-    padding: 20px;
+    padding: 60px 20px 30px;
   }
   .halftone-logo-main {
     top: -40vw;

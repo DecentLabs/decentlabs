@@ -124,7 +124,7 @@ header {
 section {
   max-width: 100%;
   margin: auto;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   padding: 60px;
 }
 
@@ -146,8 +146,7 @@ section {
   line-height: 60px;
   font-weight: 700;
   text-align: center;
-  padding: 70px 0;
-  margin: 0;
+  margin: 0 0 60px;
 }
 
 .category {
@@ -453,6 +452,10 @@ p.center {
   line-height: var(--form-size);
   color: #fff;
   font-size: 22px;
+}
+
+#event-past h2 {
+  margin-top: 40px;
 }
 
 .event {
