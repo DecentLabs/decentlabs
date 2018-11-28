@@ -173,6 +173,11 @@
   .event .img-row.four .event-img, .event .img-row.three .event-img {
     width: 100%;
     height: 300px;
+    margin-bottom: 20px;
+  }
+
+  .event .img-row img {
+    object-position: top;
   }
 
   .more-link.right::after {
@@ -255,5 +260,9 @@
 @media (min-width: 1440px) {
   section {
     width: 1440px;
+  }
+
+  .event .img-row {
+    height: 280px;
   }
 }
