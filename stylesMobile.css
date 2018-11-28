@@ -163,6 +163,10 @@
     margin: 10px auto 10px auto;
   }
 
+  .event {
+    margin: 0;
+  }
+
   .event h3 {
     font-size: 18px;
     padding: 0 20px;
@@ -177,6 +181,10 @@
     width: 100%;
     height: 300px;
     margin-bottom: 20px;
+  }
+
+  .event .img-row.four .event-img:last-of-type, .event .img-row.three .event-img:last-of-type {
+    margin-bottom: 0;
   }
 
   .event .img-row img {
