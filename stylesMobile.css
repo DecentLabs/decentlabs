@@ -27,10 +27,13 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 57vw;
+    text-align: center;
+    position: static;
   }
 
   #hero-title span {
     font-size: 30px;
+    text-align: center;
   }
 
   .halftone-logo-main {
@@ -227,26 +230,6 @@
   #intro p {
     font-size: 20px;
   }
-  .halftone-logo-main {
-    top: -40vw;
-    left: -40vw;
-    width: 125vw;
-    height: 125vw;
-  }
-  #hero-title {
-    position: absolute;
-    top: 15vw;
-    left: 10vw;
-    padding: 0;
-    margin: 0;
-    width: auto;
-    font-size: 8vw;
-    text-align: left;
-  }
-  #hero-title span {
-    font-size: 5vw;
-    text-align: left;
-  }
   #main-nav {
     top: 85%;
   }
@@ -256,5 +239,25 @@
 @media (min-width: 1440px) {
   section {
     width: 1440px;
+  }
+  #hero-title {
+    font-size: 86px;
+    left: 144px;
+    top: 216px
+  }
+  #hero-title span {
+    font-size: 72px;
+  }
+}
+
+@media (min-width: 2000px) {
+  #hero-title {
+    left: 144px;
+    top: 216px
+  }
+
+  .halftone-logo-main {
+    max-width: 2400px;
+    max-height: 2400px;
   }
 }

@@ -50,28 +50,32 @@ header {
 
 .header-inner {
   position: relative;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   height: 100%;
   overflow: hidden;
 }
 
 #hero-title {
-  width: 220px;
-  padding-left: 120px;
-  font-size: 66px;
+  font-size: 6vw;
   font-weight: 500;
   line-height: 1.26;
   color: #fff;
-  text-align: center;
+  text-align: left;
+  width: auto;
   z-index: 2;
+  position: absolute;
+  top: 15vw;
+  left: 10vw;
 }
 
 #hero-title span {
   display: block;
-  font-size: 36px;
+  /* font-size: 36px; */
   text-transform: lowercase;
+  font-size: 5vw;
+  text-align: left;
 }
 
 #main-nav {
@@ -107,14 +111,16 @@ header {
 
 .halftone-logo-main {
   position: absolute;
-  top: -30vw;
-  left: -36vw;
-  width: 105vw;
-  height: 105vw;
+  top: -40vw;
+  left: -40vw;
+  width: 125vw;
+  height: 125vw;
   opacity: .9;
   transform-origin: center center;
   z-index: 10;
   transition: transform 160s;
+  max-width: 2000px;
+  max-height: 2000px;
 }
 
 #header:hover img {
