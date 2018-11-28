@@ -214,6 +214,13 @@ section {
   flex-direction: row-reverse;
 }
 
+.category:nth-of-type(2n) .category-grid-3 .two-elem .experiment-item:first-child p {
+  padding-left: 22.5%;
+}
+.category:nth-of-type(2n + 1) .category-grid-3 .two-elem .experiment-item:first-child p {
+  padding-right: 22.5%;
+}
+
 .category:nth-of-type(2n) .category-grid-3 .two-elem h3 {
   right: 0;
 }
