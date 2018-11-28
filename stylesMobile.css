@@ -246,7 +246,7 @@
     margin-top: 40px;
   }
   #intro p {
-    font-size: 20px;
+    font-size: 22px;
   }
   #main-nav {
     top: 85%;
@@ -258,7 +258,6 @@
   section {
     width: 1440px;
   }
-
   #hero-title {
     font-size: 86px;
     left: 144px;
@@ -267,9 +266,14 @@
   #hero-title span {
     font-size: 72px;
   }
-
   .event .img-row {
     height: 280px;
+  }
+  .category:nth-of-type(2n) .category-grid-3 .two-elem .experiment-item:first-child p {
+    padding-left: 20%;
+  }
+  .category:nth-of-type(2n + 1) .category-grid-3 .two-elem .experiment-item:first-child p {
+    padding-right: 20%;
   }
 }
 
