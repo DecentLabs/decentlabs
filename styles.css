@@ -125,14 +125,17 @@ header {
   opacity: .9;
   transform-origin: center center;
   z-index: 10;
-  transition: transform 160s;
   max-width: 2000px;
   max-height: 2000px;
+  transition: transform 160s;
+  transform: rotateZ(360deg);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-#header:hover img {
+/* #header:hover img {
   transform: rotateZ(360deg);
-}
+} */
 
 section {
   max-width: 100%;
