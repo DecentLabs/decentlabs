@@ -5,7 +5,7 @@
     --row-height: 320px;
   }
 
-  #main-nav {
+ #main-nav {
     width: 275px;
     height: 275px;
     top: 94%;
@@ -192,7 +192,12 @@
     font-size: 13px;
     text-align: left;
     padding: 7px;
+  }
 
+  footer img {
+    width: 70vw;
+    height: 30vw;
+    transform: translate(-2%, -5%);
   }
 }
 
