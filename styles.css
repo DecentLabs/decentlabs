@@ -387,45 +387,48 @@ p.center {
   font-size: 28px;
   line-height: 36px;
   text-align: center;
-  margin: 24px 0;
+  margin: 0 auto 20px auto;
   overflow: hidden;
 }
 
 #event-upcoming {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   position: relative;
-  padding: 20px;
-  background: var(--yellow);
   box-sizing: border-box;
   margin-bottom: 30px;
-  overflow: hidden;
+  /* width: 100vw;
+  margin-left: -60px; */
+}
 
-  max-height: 500px;
+.events-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  padding: 20px 20px 20px 20px;
+  background-image: url('./assets/grid_6.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 #event-upcoming .form-column {
   position: relative;
   background-color: white;
-  border: 1px dashed black;
   box-sizing: border-box;
-}
-#event-upcoming .form-column:after {
-  position: absolute;
-  content: '';
-  left: 1px;
-  top: 1px;
-  border: 1px dotted black;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
+  display: inline-block;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
 }
 
 #event-upcoming .events-column {
-  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 10px;
+  width: calc(100% - 300px);
+  /* border: 1px solid black; */
+  background-color: #fff;
 }
 
 
@@ -446,20 +449,19 @@ p.center {
 #subscribe-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   box-sizing: border-box;
-  padding: 30px 50px;
-  width: 300px;
-  height: 300px;
+  padding: 30px 30px;
+  width: 100%;
+  height: 100%;
 }
 
 #subscribe-form label {
   width: 90%;
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 20px;
   line-height: 1.3;
   letter-spacing: 0.02em;
   text-align: center;
@@ -468,67 +470,39 @@ p.center {
 #subscribe-form input,
 #subscribe-form button {
   font-family: inherit;
-  height: 45px;
   font-size: 18px;
   letter-spacing: 0.02em;
   box-sizing: border-box;
 }
 
 #subscribe-form input {
-  padding: 10px;
-  text-align: right;
-  width: 90%;
+  padding: 0 0 2px 0;
+  text-align: center;
+  width: 100%;
+  border-bottom: 2px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: auto;
 }
 
 #subscribe-form button {
   width: 50%;
-  height: 50%;
-  margin-top: 20px;
+  height: 40px;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
   text-align: center;
   border: none;
   cursor: pointer;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 40%;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 61%;
-  background-color: yellow;
+  background-color: black;
   color: white;
   position: relative;
   z-index: 100;
 }
 
-/* #subscribe-form button:after {
-  content: '';
-  position: absolute;
-  left: 2%;
-  top: 3%;
-  width: 93%;
-  height: 85%;
-  border-top-left-radius: 43%;
-  border-top-right-radius: 45%;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 32%;
-  background-color: red;
-  z-index: -1;
-} */
-
-#subscribe-form button:before {
-  content: '';
-  position: absolute;
-  left: 2%;
-  top: 3%;
-  width: 90%;
-  height: 85%;
-  border-top-left-radius: 43%;
-  border-top-right-radius: 45%;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 32%;
-  background-color: black;
-  z-index: -1;
-}
-
 #subscribe-form button:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--yellow);
 }
 
 .form-column #success-msg {
