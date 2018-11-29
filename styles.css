@@ -103,8 +103,8 @@ header {
 #main-nav a {
   display: block;
   padding: 5px 0;
-  margin-right: 45%;
-  font-size: 26px;
+  margin-right: 39%;
+  font-size: 24px;
   line-height: 1.3;
   font-weight: 700;
   text-align: right;
@@ -127,15 +127,17 @@ header {
   z-index: 10;
   max-width: 2000px;
   max-height: 2000px;
-  transition: transform 160s;
-  transform: rotateZ(360deg);
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: rotateLogo 180s linear infinite;
 }
 
-/* #header:hover img {
-  transform: rotateZ(360deg);
-} */
+@keyframes rotateLogo {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
 
 section {
   max-width: 100%;
@@ -215,10 +217,17 @@ section {
 }
 
 .category:nth-of-type(2n) .category-grid-3 .two-elem .experiment-item:first-child p {
-  padding-left: 22.5%;
+  padding-left: 24%;
 }
 .category:nth-of-type(2n + 1) .category-grid-3 .two-elem .experiment-item:first-child p {
-  padding-right: 22.5%;
+  padding-right: 24%;
+}
+.category-grid-2 .experiment-item:first-child p {
+  padding-right: 21%;
+}
+
+.category-grid-2 .experiment-item:last-child p {
+  padding-left: 21%;
 }
 
 .category:nth-of-type(2n) .category-grid-3 .two-elem h3 {
@@ -246,13 +255,14 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+  padding: 15px;
   margin: 0;
   z-index: 2;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
   letter-spacing: 0.01em;
   background-color: var(--darkgrey);
+  /* text-align: center; */
 }
 
 .more-link {
