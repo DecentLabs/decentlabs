@@ -215,10 +215,17 @@ section {
 }
 
 .category:nth-of-type(2n) .category-grid-3 .two-elem .experiment-item:first-child p {
-  padding-left: 22.5%;
+  padding-left: 24%;
 }
 .category:nth-of-type(2n + 1) .category-grid-3 .two-elem .experiment-item:first-child p {
-  padding-right: 22.5%;
+  padding-right: 24%;
+}
+.category-grid-2 .experiment-item:first-child p {
+  padding-right: 21%;
+}
+
+.category-grid-2 .experiment-item:last-child p {
+  padding-left: 21%;
 }
 
 .category:nth-of-type(2n) .category-grid-3 .two-elem h3 {
@@ -246,13 +253,14 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+  padding: 15px;
   margin: 0;
   z-index: 2;
   font-family: 'Open Sans', sans-serif;
   color: #fff;
   letter-spacing: 0.01em;
   background-color: var(--darkgrey);
+  /* text-align: center; */
 }
 
 .more-link {
