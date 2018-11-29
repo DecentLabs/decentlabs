@@ -364,7 +364,7 @@ p.center {
 
 .heart-divider {
   padding: 0;
-  background: url(assets/divider-heart-colored.jpg) top right no-repeat;
+  background: url('assets/divider-heart-colored_small.jpg') top right no-repeat;
   background-size: cover;
 }
 
