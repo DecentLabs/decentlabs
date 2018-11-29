@@ -654,4 +654,5 @@ footer img {
   width: 44vw;
   height: 21vw;
   transform: translate(-10%, 0);
+  pointer-events: none;
 }
