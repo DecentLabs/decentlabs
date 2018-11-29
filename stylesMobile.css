@@ -284,6 +284,12 @@
   .category:nth-of-type(2n + 1) .category-grid-3 .two-elem .experiment-item:first-child p {
     padding-right: 20%;
   }
+
+  .heart-divider p {
+    max-width: 520px;
+    margin: 0 38% 0 auto;
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 2000px) {
