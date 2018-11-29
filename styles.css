@@ -147,6 +147,10 @@ section {
   padding: 60px;
 }
 
+section:last-child {
+  margin-bottom: 0px;
+}
+
 #intro {
   padding: 40px;
   margin: 0 auto;
@@ -303,6 +307,10 @@ section {
   border: 10px solid #ffffff;
 } */
 
+.event:last-child {
+  margin-bottom: 0px;
+}
+
 .more-link.left::after {
   left:0;
   transform: translate(0, 0);
@@ -392,7 +400,7 @@ p.center {
   font-size: 28px;
   line-height: 36px;
   text-align: center;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 40px auto;
   overflow: hidden;
 }
 
@@ -401,8 +409,6 @@ p.center {
   padding: 20px;
   box-sizing: border-box;
   margin-bottom: 30px;
-  /* width: 100vw;
-  margin-left: -60px; */
 }
 
 .events-content {
@@ -418,7 +424,6 @@ p.center {
 }
 
 #event-upcoming .form-column {
-  position: relative;
   background-color: white;
   box-sizing: border-box;
   display: inline-block;
@@ -433,7 +438,6 @@ p.center {
   justify-content: center;
   margin-left: 10px;
   width: calc(100% - 300px);
-  /* border: 1px solid black; */
   background-color: #fff;
 }
 
@@ -508,17 +512,16 @@ p.center {
 }
 
 #subscribe-form button:hover {
-  background: var(--yellow);
+  background: var(--orange);
 }
 
 .form-column #success-msg {
   display: none;
-  height: var(--form-size);
-  margin: 0 30px;
-  text-align: right;
-  line-height: var(--form-size);
-  color: #fff;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  color: var(--orange);
   font-size: 22px;
+  margin-top: calc(50% - 15px);
 }
 
 #event-past h2 {
@@ -538,9 +541,32 @@ p.center {
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
-  padding: 0 7px;
+  padding: 0 17px;
   margin: 24px 0;
+  position: relative;
+  display: inline-block;
 }
+
+.event h3:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--orange);
+}
+
+/* .event h3:after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  bottom: -3px;
+  width: calc(100% - 30px);
+  height: 1px;
+  border-bottom: 1px dashed var(--orange);
+} */
 
 .event .img-row {
   display: flex;

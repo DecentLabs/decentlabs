@@ -177,6 +177,10 @@
     padding: 0 20px;
   }
 
+  .event h3:before {
+    display: none;
+  }
+
   .event .img-row {
     flex-direction: column;
     height: auto;
