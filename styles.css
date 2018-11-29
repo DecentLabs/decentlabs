@@ -399,7 +399,6 @@ p.center {
 #event-upcoming {
   position: relative;
   padding: 20px;
-  background: var(--orange);
   box-sizing: border-box;
   margin-bottom: 30px;
   /* width: 100vw;
