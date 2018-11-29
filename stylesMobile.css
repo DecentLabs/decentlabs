@@ -63,14 +63,14 @@
     line-height: 32px;
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+    border-bottom: 1px dotted var(--black);
   }
   .section-title:after {
     content: '';
     width: 110%;
     position: absolute;
     height: 1px;
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dashed var(--black);
     bottom: -2px;
     left: -5%;
   }
@@ -84,7 +84,7 @@
     width: 50%;
     position: absolute;
     height: 1px;
-    border-bottom: 1px dashed black;
+    border-bottom: 1px dashed var(--black);
     bottom: -2px;
     left: 25%;
   }
@@ -93,7 +93,7 @@
     width: 45%;
     position: absolute;
     height: 1px;
-    border-bottom: 1px dotted black;
+    border-bottom: 1px dotted var(--black);
     bottom: -1px;
     left: 27.5%;
   }
