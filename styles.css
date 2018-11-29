@@ -3,7 +3,7 @@
   --black: #0D1112;
   --darkgrey: #2b2b2b;
   --lightgrey: #4b4b4b;
-  --yellow: #f1f848;
+  --orange: #f4472d;
   --row-height: 420px;
   --gap-size: 30px;
   --logo-size: 280px;
@@ -94,7 +94,7 @@ header {
   justify-content: center;
   width: 360px;
   height: 360px;
-  background-color: var(--yellow);
+  background-color: var(--orange);
   border-radius: 100%;
   z-index: 12;
   transform: translate(35%, -50%);
@@ -107,6 +107,7 @@ header {
   font-size: 24px;
   line-height: 1.3;
   font-weight: 700;
+  color: #fff;
   text-align: right;
   text-transform: uppercase;
   transition: opacity .4s;
@@ -169,7 +170,7 @@ section {
 
 .category {
   position: relative;
-  margin-bottom: var(--gap-size);
+  margin-bottom: calc(var(--gap-size) * 3);
 }
 
 .category-grid-2 {
@@ -247,7 +248,11 @@ section {
   z-index: 2;
   font-size: 24px;
   line-height: 30px;
-  background: var(--yellow);
+  color: #fff;
+  background: var(--orange);
+}
+.experiment-item a {
+  color: #fff;
 }
 
 .experiment-item p {
@@ -397,7 +402,7 @@ p.center {
   flex-wrap: wrap;
   position: relative;
   padding: 20px;
-  background: var(--yellow);
+  background: var(--orange);
   box-sizing: border-box;
   margin-bottom: 30px;
   overflow: hidden;
@@ -548,7 +553,7 @@ p.center {
   right: 0;
   opacity: 0;
   z-index: 1;
-  background-color: var(--yellow);
+  background-color: #68E1B9;
   mix-blend-mode: overlay;
   transition: opacity .2s;
   pointer-events: none;
