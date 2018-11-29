@@ -148,6 +148,10 @@ section:last-child {
   margin-bottom: 0px;
 }
 
+.category:last-child {
+  margin-bottom: 0px;
+}
+
 #intro {
   padding: 40px;
   margin: 0 auto;
