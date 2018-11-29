@@ -132,30 +132,35 @@
     right: auto !important; /* todo */
   }
 
+  .category:nth-of-type(2n) .category-grid-3 .two-elem .experiment-item:first-child p {
+    padding-left: 20px;
+  }
+  .category:nth-of-type(2n + 1) .category-grid-3 .two-elem .experiment-item:first-child p {
+    padding-right: 20px;
+  }
+  .category-grid-2 .experiment-item:first-child p {
+    padding-right: 20px;
+  }
+
+  .category-grid-2 .experiment-item:last-child p {
+    padding-left: 20px;
+  }
+
   #event-upcoming {
     padding: 10px;
   }
 
+  .events-content {
+    padding: 20px;
+  }
+
   #event-upcoming .form-column {
-    left: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #subscribe-form {
-    align-items: center;
-  }
-
-  #subscribe-form label, #subscribe-form input {
-    text-align: center;
-  }
-
-  #subscribe-form input {
-    padding: 9px 10px;
+    width: 260px;
+    height: 260px;
   }
 
   #subscribe-form button {
-    padding: 10px 25px;
+    width: 60%;
   }
 
   #happenings h2 {
