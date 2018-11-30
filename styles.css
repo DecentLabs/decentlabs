@@ -485,6 +485,16 @@ p.center {
   border-left: none;
   border-right: none;
   height: auto;
+  transition: border-color .1s;
+}
+
+#subscribe-form input.error {
+  border-color: var(--orange);
+}
+
+#subscribe-form input:focus {
+  outline: 1px dotted var(--lightgrey);
+  outline-offset: 5px;
 }
 
 #subscribe-form button {
