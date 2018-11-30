@@ -255,6 +255,7 @@ section:last-child {
   line-height: 31px;
   color: #fff;
   background: var(--orange);
+  max-width: calc(100% - 45px)
 }
 .experiment-item a {
   color: #fff;
@@ -272,7 +273,6 @@ section:last-child {
   color: #fff;
   letter-spacing: 0.01em;
   background-color: var(--darkgrey);
-  /* text-align: center; */
 }
 
 .more-link {
@@ -558,16 +558,6 @@ p.center {
   border-radius: 100%;
   background-color: var(--orange);
 }
-
-/* .event h3:after {
-  content: '';
-  position: absolute;
-  left: 15px;
-  bottom: -3px;
-  width: calc(100% - 30px);
-  height: 1px;
-  border-bottom: 1px dashed var(--orange);
-} */
 
 .event .img-row {
   display: flex;
