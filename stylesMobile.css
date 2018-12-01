@@ -150,7 +150,7 @@
   }
 
   #event-upcoming {
-    padding: 0px;
+    padding: 0;
     margin-bottom: 50px;
   }
 
@@ -293,6 +293,14 @@
   #main-nav {
     top: 85%;
   }
+
+  .category .category-grid-2 .experiment-item:not(:last-of-type) p {
+    padding-right: 10%;
+  }
+
+  /*.category .category-grid-2 .experiment-item:last-of-type p {*/
+    /*padding-left: 10%;*/
+  /*}*/
 }
 
 /* big desktop */
