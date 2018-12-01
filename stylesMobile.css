@@ -120,9 +120,10 @@
   .experiment-item p {
     position: static;
     color: #000;
-    background-color: transparent;
+    background-color: white;
     padding: 10px 20px 30px 20px;
     line-height: 1.4em;
+    z-index: 3;
   }
 
   .experiment-item h3 {
@@ -133,6 +134,10 @@
   }
   .event .more-link::after, .category .more-link::after {
     border: 8px solid var(--darkgrey);
+  }
+  .category .more-link.right::after {
+    left: 100%;
+    top: 0;
   }
 
   .category:nth-of-type(2n) .category-grid-3 .two-elem .experiment-item:first-child p {

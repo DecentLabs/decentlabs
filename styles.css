@@ -582,6 +582,7 @@ p.center {
   width: calc(1 / 3 * 100%);
 }
 
+
 .experiment-item::after,
 .event-img::after {
   position: absolute;
