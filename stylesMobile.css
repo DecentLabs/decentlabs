@@ -163,8 +163,17 @@
     height: 260px;
   }
 
+  #subscribe-form {
+    padding: 30px;
+  }
+  #subscribe-form label, #subscribe-form input  {
+    font-size: 16px;
+  }
+
   #subscribe-form button {
     width: 60%;
+    font-size: 16px;
+    height: 35px;
   }
 
   #event-past .event:nth-of-type(1) {
