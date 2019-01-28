@@ -613,6 +613,7 @@ footer {
   max-width: 1440px;
   padding: 0 60px;
   box-sizing: border-box;
+  text-align: right;
 }
 
 
@@ -636,7 +637,7 @@ footer a:hover {
   opacity: 0.5;
 }
 
-footer img {
+footer img.footer-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -644,4 +645,21 @@ footer img {
   height: 21vw;
   transform: translate(-10%, 0);
   pointer-events: none;
+}
+
+.footer-inner p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-inner div {
+  height: 50px;
+  width: auto;
+  display: inline-block;
+  margin: 0 0 10px 0;
+}
+
+footer img.icon-link {
+  width: 40px;
+  height: 40px;
 }

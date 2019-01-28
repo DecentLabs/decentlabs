@@ -203,44 +203,36 @@
     font-size: 18px;
     padding: 0 20px;
   }
-
   #event-past h3:before {
     top: -15px;
     left: calc(50% - 4px);
     width: 8px;
     height: 8px;
   }
-
   .event .img-row {
     flex-direction: column;
     height: auto;
   }
-
   .event .img-row.four .event-img, .event .img-row.three .event-img {
     width: 100%;
     height: 300px;
     margin-bottom: 20px;
   }
-
   .event .img-row.four .event-img:last-of-type, .event .img-row.three .event-img:last-of-type {
     margin-bottom: 0;
   }
-
   .event .img-row img {
     object-position: top;
   }
-
   .more-link.right::after {
     left:0;
     transform: translate(0, 0);
     top:100%;
   }
-
   .heart-divider {
     background: url(assets/divider-heart-colored_small.jpg) top right no-repeat;
     background-size: cover;
   }
-
   .heart-divider p {
     margin-right: 35%;
     margin-left: 10px;
@@ -248,11 +240,9 @@
     text-align: left;
     padding: 7px;
   }
-
   footer {
     height: 130px;
   }
-
   footer img {
     width: 70vw;
     height: 30vw;
@@ -262,7 +252,7 @@
     padding: 0 30px 0 30px;
   }
   .footer-inner p {
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: 5px;
     font-size: 18px;
     line-height: 140%;
@@ -270,15 +260,19 @@
   .footer-inner a {
     font-size: 18px;
   }
-
-}
+  .footer-inner div {
+    margin: 0;
+  }
+  .footer-inner div a {
+    margin: 0;
+  }
+ }
 
 /* mobile & tablet */
 @media (max-width: 1023px) {
   #intro {
     padding: 40px 40px 0 40px;
   }
-
   #intro p {
     width: 100%;
     text-align: center;
@@ -307,14 +301,9 @@
   #main-nav {
     top: 85%;
   }
-
   .category .category-grid-2 .experiment-item:not(:last-of-type) p {
     padding-right: 10%;
   }
-
-  /*.category .category-grid-2 .experiment-item:last-of-type p {*/
-    /*padding-left: 10%;*/
-  /*}*/
 }
 
 /* big desktop */
@@ -339,7 +328,6 @@
   .category:nth-of-type(2n + 1) .category-grid-3 .two-elem .experiment-item:first-child p {
     padding-right: 20%;
   }
-
   .heart-divider p {
     max-width: 520px;
     margin: 0 38% 0 auto;
@@ -352,7 +340,6 @@
     left: 144px;
     top: 216px
   }
-
   .halftone-logo-main {
     max-width: 2400px;
     max-height: 2400px;
