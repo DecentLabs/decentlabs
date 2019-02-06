@@ -311,13 +311,11 @@
   section {
     width: 1440px;
   }
-  #hero-title {
-    font-size: 86px;
-    left: 144px;
-    top: 216px
+  #hero-title span.title {
+    font-size: 180px;
   }
-  #hero-title span {
-    font-size: 72px;
+  #hero-title span.subtitle {
+    font-size: 100px;
   }
   .event .img-row {
     height: 280px;
