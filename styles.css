@@ -101,6 +101,7 @@ header {
   opacity: 0.7;
   mix-blend-mode: multiply;
   transform: translate3d(0, 0, 0);
+  cursor: pointer;
 }
 
 .bubble-1 {

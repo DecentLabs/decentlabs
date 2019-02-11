@@ -9,12 +9,20 @@ class Animation {
     this.directionY = null
     this.maxX = this.width - this.getSize(this.bubble, 'width')
     this.maxY = this.height - this.getSize(this.bubble, 'height')
-
-    console.log(this.maxX, this.maxY);
+    this.colors = ['#e8a87c','#e27d60','#c38d9e','#8bcbc8','#40b3a3']
   }
 
   getSize (node, property) {
     return parseInt(window.getComputedStyle(node)[property].split('px')[0])
+  }
+
+  click () {
+    this.changeColor()
+  }
+
+  changeColor () {
+    let index = Math.round(Math.random() * (this.colors.length-1))
+    this.bubble.style.backgroundColor = this.colors[index]
   }
 
   startAnimation () {
@@ -41,10 +49,19 @@ class Animation {
       }
     }
     return newDir
+  }
 
+  randomDirectionChange () {
+    return Math.floor(Math.random() * 1000) === 0
   }
 
   move () {
+    if (this.randomDirectionChange()) {
+      this.updateDirectionX()
+      this.updateDirectionY()
+      this.changeColor()
+    }
+
     if (this.x <= 0 || this.x >= this.maxX) {
       this.updateDirectionX()
     }
@@ -80,4 +97,8 @@ let bubbles = document.querySelectorAll('.bubble')
 bubbles.forEach((bubble) => {
   let anim = new Animation(bubble)
   anim.startAnimation()
+
+  bubble.addEventListener('click', () => {
+    anim.click()
+  })
 })
