@@ -107,7 +107,7 @@ header {
   position: absolute;
   border-radius: 100%;
   transform: translate3d(0, 0, 0);
-  transition: background-color 0.5s ease-in, transform 0.1s linear, width 0.5s ease-out, height 0.5s ease-out;
+  transition: background-color 0.5s ease-in, width 0.2s ease-out, height 0.2s ease-out;
   cursor: pointer;
   mix-blend-mode: exclusion;
 }
@@ -152,29 +152,6 @@ header {
 
 #main-nav a:hover {
   opacity: 0.5;
-}
-
-.halftone-logo-main {
-  position: absolute;
-  top: -40vw;
-  left: -40vw;
-  width: 125vw;
-  height: 125vw;
-  opacity: .9;
-  transform-origin: center center;
-  z-index: 10;
-  max-width: 2000px;
-  max-height: 2000px;
-  animation: rotateLogo 180s linear infinite;
-}
-
-@keyframes rotateLogo {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
 }
 
 section {

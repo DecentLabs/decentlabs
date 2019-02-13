@@ -21,11 +21,13 @@ class Animation {
     for (let t = 1; t >= 0.45; t-=0.004) {
       this.easeIn.push((t * t) * 1.5)
     }
+    this.left = getValue(this.bubble, 'left')
+    this.top = getValue(this.bubble, 'top')
     this.easingLength = this.easeIn.length-1
     this.speed = this.easeIn[this.easingLength]
     this.changeColor()
     this.update()
-    window.requestAnimationFrame(this.move.bind(this))
+    this.move()
   }
 
   update () {
@@ -46,23 +48,22 @@ class Animation {
   }
 
   updateSize () {
-    let newSize = Math.round(Math.random() * (height * 0.4) + (height * 0.3))
-    let pos = (this.size - newSize) / 2
+    let newSize = Math.round(Math.random() * (height * 0.25) + (height * 0.25))
+    let pos = this.size/2 - newSize/2
     this.size = newSize
     this.x += pos
     this.y += pos
 
     this.bubble.style.setProperty('width', this.size + 'px')
     this.bubble.style.setProperty('height', this.size + 'px')
+
     let translate = `translate3d(${this.x}px, ${this.y}px, 0)`
     this.bubble.style.setProperty('transform', translate)
   }
 
   getMinMax () {
-    let minX = getValue(this.bubble, 'left')
-    let minY = getValue(this.bubble, 'top')
-    this.minX = minX > 0 ? minX * -1 : minX
-    this.minY = minY > 0 ? minY * -1 : minY
+    this.minX = this.left > 0 ? this.left * -1 : this.left
+    this.minY = this.top > 0 ? this.top * -1 : this.top
     this.maxX = width + this.minX - this.size
     this.maxY = height + this.minY - this.size
   }
@@ -106,20 +107,16 @@ class Animation {
     if (randomChange()) {
       this.updateDirections()
       this.changeColor()
-    }
-
-    if (this.x < this.minX || this.x > this.maxX) {
+    } else if (this.x < this.minX || this.x > this.maxX) {
       this.updateDirectionX()
       this.easing = 0
-    }
-    if (this.y < this.minY || this.y > this.maxY) {
+    } else if (this.y < this.minY || this.y > this.maxY) {
       this.updateDirectionY()
       this.easing = 0
-    }
-
-    if (this.directionX === 0 && this.directionY === 0) {
+    } else if (this.directionX === 0 && this.directionY === 0) {
       this.updateDirections()
     }
+
     if (this.easing !== false && this.easing <= this.easingLength) {
       this.speed = this.easeIn[this.easing]
       this.easing += 1
