@@ -6,7 +6,6 @@
   --orange: #EE4036;
   --row-height: 420px;
   --gap-size: 30px;
-  --logo-size: 280px;
   --form-size: 420px;
 }
 
@@ -54,8 +53,10 @@ header {
   overflow: hidden;
   background-image: url('./assets/cover.png');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  height: 800px;
+  /* background-size: cover; */
+  background-position: 115% 50%;
+  background-size: 190%;
 }
 
 #hero-title {
@@ -134,7 +135,6 @@ header {
   border-radius: 100%;
   z-index: 12;
   transform: translate(35%, -50%);
-  /* display: none; */
 }
 
 #main-nav a {
@@ -195,10 +195,18 @@ section:last-child {
   margin-bottom: calc(var(--gap-size) * 3);
 }
 
+.category-grid-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(var(--row-height) * 2 + var(--gap-size));
+}
+
 .category-grid-2 {
   display: flex;
   height: var(--row-height);
   justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .category-grid-2 .experiment-item {
@@ -265,7 +273,8 @@ section:last-child {
   line-height: 31px;
   color: #fff;
   background: var(--orange);
-  max-width: calc(100% - 45px)
+  max-width: calc(100% - 45px);
+  height: 45px;
 }
 .experiment-item a {
   color: #fff;
@@ -324,28 +333,6 @@ section:last-child {
 
 p.center {
   text-align: center;
-}
-
-.category-logo {
-  position: absolute;
-  width: var(--logo-size);
-  height: var(--logo-size);
-  z-index: 100;
-  border-radius: 100%;
-  background-color: #fff;
-  top: calc((var(--row-height) - var(--logo-size)) / 2);
-  left: calc(50% - var(--logo-size) / 2);
-  overflow: hidden;
-}
-
-.category:nth-of-type(2n+1) .category-grid-3 .category-logo {
-  top: calc(50% - var(--logo-size) / 2);
-  left: calc(60% - var(--logo-size) / 2);
-}
-
-.category:nth-of-type(2n) .category-grid-3 .category-logo {
-  top: calc(50% - var(--logo-size) / 2);
-  left: calc(40% - var(--logo-size) / 2);
 }
 
 .category-name {
@@ -603,7 +590,7 @@ p.center {
   right: 0;
   opacity: 0;
   z-index: 1;
-  background-color: #68E1B9;
+  background-color: #8bcbc8;
   mix-blend-mode: overlay;
   transition: opacity .1s;
   pointer-events: none;

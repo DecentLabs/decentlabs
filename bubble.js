@@ -48,7 +48,7 @@ class Animation {
   }
 
   updateSize () {
-    let newSize = Math.round(Math.random() * (height * 0.25) + (height * 0.25))
+    let newSize = Math.round(Math.random() * (height * 0.45) + (height * 0.25))
     let pos = this.size/2 - newSize/2
     this.size = newSize
     this.x += pos
@@ -150,7 +150,9 @@ const header = document.querySelector('header')
 const ratio = 2.585
 let width = window.innerWidth
 let height = width / ratio
-header.style.setProperty('height', height + 'px')
+height = 720;
+header.style.setProperty('height', '720px')
+// header.style.setProperty('height', height + 'px')
 let animations = []
 
 let bubbles = document.querySelectorAll('.bubble')
@@ -167,7 +169,8 @@ bubbles.forEach((bubble) => {
 window.addEventListener('resize', () => {
   width = window.innerWidth
   height = width / ratio
-  header.style.setProperty('height', height + 'px')
+  // header.style.setProperty('height', height + 'px')
+  header.style.setProperty('height', '800px')
   animations.forEach((anim) => {
     anim.update()
   })
