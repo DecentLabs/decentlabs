@@ -5,7 +5,13 @@ class Animation {
     this.y = 0
     this.directionX = null
     this.directionY = null
-    this.colors = ['#e8a87c','#e27d60','#c38d9e','#8bcbc8','#40b3a3', '#4CC1E5']
+    // '#e27d60'
+    this.colors = ['#e8a87c','#c38d9e','#8bcbc8','#40b3a3', '#4CC1E5']
+    this.gradients = [
+      'inear-gradient(to right top, #e27d60, #c59c57, #a2b372, #89c29f, #8bcbc8)',
+      'linear-gradient(to right top, #e8a87c, #e79e73, #e5936c, #e48865, #e27d60)',
+      'linear-gradient(to right top, #c38d9e, #ae93bf, #7ca1d3, #3badca, #40b3a3)'
+    ]
     this.color = null
     this.minX = null
     this.minY = null
@@ -75,7 +81,7 @@ class Animation {
 
   changeColor () {
     let colors = this.colors.filter(c => c !== this.color)
-    let index = Math.round(Math.random() * (colors.length-1))
+    let index = Math.round(Math.random() * (this.colors.length-1))
     this.color = colors[index]
     this.bubble.style.backgroundColor = this.color
   }
@@ -144,37 +150,6 @@ class Animation {
     window.requestAnimationFrame(this.move.bind(this))
   }
 }
-
-
-const header = document.querySelector('header')
-const ratio = 2.585
-let width = window.innerWidth
-let height = width / ratio
-height = 720;
-header.style.setProperty('height', '720px')
-// header.style.setProperty('height', height + 'px')
-let animations = []
-
-let bubbles = document.querySelectorAll('.bubble')
-bubbles.forEach((bubble) => {
-  let anim = new Animation(bubble)
-  animations.push(anim)
-  anim.startAnimation()
-
-  bubble.addEventListener('click', () => {
-    anim.click()
-  })
-})
-
-window.addEventListener('resize', () => {
-  width = window.innerWidth
-  height = width / ratio
-  // header.style.setProperty('height', height + 'px')
-  header.style.setProperty('height', '800px')
-  animations.forEach((anim) => {
-    anim.update()
-  })
-})
 
 function getValue (node, property) {
   return parseInt(window.getComputedStyle(node)[property].split('px')[0])
