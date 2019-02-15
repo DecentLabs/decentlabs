@@ -25,7 +25,6 @@ function templating () {
   DECENT_PROJECTS.forEach((category) => {
     let categoryBox = `
       <div class="experiment-item">
-        <div class="overlay"></div>
         <img src="${category.image}">
         <h3>${category.catName}</h3>
       </div>

@@ -1,7 +1,7 @@
 const DECENT_PROJECTS = [
   {
     catName: 'fun',
-    image: 'https://placebear.com/500/500',
+    image: 'https://media3.giphy.com/media/3ohzAOyCNCfzS0m2FW/source.gif',
     projects: [
       {
         category: 'fun',
@@ -35,7 +35,7 @@ const DECENT_PROJECTS = [
   },
   {
     catName: 'crypto',
-    image: 'https://placebear.com/500/500',
+    image: 'https://media3.giphy.com/media/l49JMVDvP8D38LHwI/giphy.gif',
     projects: [
       {
         category: 'crypto',
@@ -62,7 +62,7 @@ const DECENT_PROJECTS = [
   },
   {
     catName: 'hardware',
-    image: 'https://placebear.com/500/500',
+    image: 'https://thumbs.gfycat.com/AdoredGraveAfricangoldencat-max-1mb.gif',
     projects: [
       {
         category: 'hardware',

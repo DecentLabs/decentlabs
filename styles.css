@@ -15,6 +15,7 @@ body {
   color: var(--text-color);
   font-family: 'century-gothic', sans-serif;
   overflow-x: hidden;
+  /* background-color: black; */
 }
 
 body * {
@@ -174,27 +175,20 @@ header {
 }
 
 section {
-  max-width: 100%;
-  /* margin: auto; */
-  /* margin-bottom: 30px; */
-  /* padding: 60px; */
+  width: 100%;
+  padding: 60px 0 60px 0;
 }
 
-section#experiments {
-  /* background-color: pink; */
-  padding: var(--gap-size);
-}
-
-section:last-child {
-  margin-bottom: 0px;
-}
-
-.category:last-child {
-  margin-bottom: 0px;
+.section-title {
+  font-size: 54px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 60px;
 }
 
 #intro {
-  padding: 60px 15% 60px 15%;
+  padding: 100px 15% 100px 15%;
   background-color: black;
   color: white;
   position: relative;
@@ -226,17 +220,9 @@ section:last-child {
   color: #40b3a3;
 }
 
-.section-title {
-  font-size: 54px;
-  line-height: 60px;
-  font-weight: 700;
-  text-align: center;
-  margin: 0 0 60px;
-}
-
-.category {
-  position: relative;
-  margin-bottom: calc(var(--gap-size) * 3);
+section#experiments {
+  background-color: var(--orange);
+  padding: 60px var(--gap-size) 60px var(--gap-size);
 }
 
 .category-grid {
@@ -266,7 +252,6 @@ section:last-child {
   height: calc(100vh - 4 * var(--gap-size));
 }
 
-
 .experiment-item h3 {
   position: absolute;
   top: 0;
@@ -292,7 +277,6 @@ section:last-child {
   padding: 15px;
   margin: 0;
   z-index: 2;
-  font-family: 'Open Sans', sans-serif;
   color: #fff;
   letter-spacing: 0.01em;
   background-color: var(--darkgrey);
@@ -319,54 +303,23 @@ section:last-child {
   top: 0;
 }
 
-.event .more-link::after {
+.event .more-link:after {
   left: 0;
 }
 
-.category .more-link.left::after {
+.category .more-link:after {
   left: 100%;
-}
-
-.category .more-link.right::after {
-  left: -45px;
 }
 
 .event:last-child {
   margin-bottom: 0px;
 }
 
-p.center {
-  text-align: center;
-}
-
-.category-name {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 400;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.full-bleed {
+#divider {
   max-width: 100%;
-  /* height: 320px; */
 }
 
-.heart-divider {
-  padding: 0;
-  /* background: url('assets/divider-heart-colored_small.jpg') top right no-repeat; */
-  background-size: cover;
-}
-
-.heart-divider p {
+#divider p {
   padding: 60px 20px 60px 20px;
   font-size: 40px;
   line-height: 1.4em;
