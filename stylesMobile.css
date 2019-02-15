@@ -309,7 +309,7 @@
 /* big desktop */
 @media (min-width: 1440px) {
   section {
-    width: 1440px;
+    /* width: 1440px; */
   }
   #hero-title span.title {
     font-size: 180px;
@@ -327,9 +327,9 @@
     padding-right: 20%;
   }
   .heart-divider p {
-    max-width: 520px;
-    margin: 0 38% 0 auto;
-    font-size: 20px;
+    /* max-width: 520px; */
+    /* margin: 0 38% 0 auto; */
+    /* font-size: 20px; */
   }
 }
 

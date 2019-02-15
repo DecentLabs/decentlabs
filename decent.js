@@ -11,9 +11,49 @@ init()
 function init () {
   header.style.setProperty('height', '700px')
   header.style.setProperty('height', height + 'px')
+  templating ()
   resize()
   createBubbles()
   hover()
+}
+
+function templating () {
+  console.log(DECENT_PROJECTS);
+  let grid = document.querySelector('.category-grid')
+  let gridContent = ''
+
+  DECENT_PROJECTS.forEach((category) => {
+    let categoryBox = `
+      <div class="experiment-item">
+        <div class="overlay"></div>
+        <img src="${category.image}">
+        <h3>${category.catName}</h3>
+      </div>
+    `
+    gridContent += categoryBox
+
+    category.projects.forEach((project) => {
+      let template = `
+        <div class="experiment-item">
+          <div class="overlay">
+            <p>${project.desc ? project.desc : ''}</p>
+          </div>
+
+          ${project.url ? `<a class="img-link" href="${project.url}" target="_blank">
+            <img src="${project.image}">
+          </a>` : `<img src="${project.image}">`}
+
+          <h3>
+            ${project.url ? `<a class="more-link left" href="${project.url}" target="_blank">
+              ${project.name}
+            </a>` : project.name}
+          </h3>
+        </div>
+      `
+      gridContent += template
+    })
+  })
+  grid.innerHTML = gridContent
 }
 
 function hover () {
