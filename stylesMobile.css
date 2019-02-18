@@ -318,7 +318,7 @@
     font-size: 100px;
   }
   .event .img-row {
-    height: 280px;
+    /* height: 280px; */
   }
   .category:nth-of-type(2n) .category-grid-3 .two-elem .experiment-item:first-child p {
     padding-left: 20%;

@@ -1,7 +1,8 @@
 const DECENT_PROJECTS = [
   {
     catName: 'fun',
-    image: 'https://media3.giphy.com/media/3ohzAOyCNCfzS0m2FW/source.gif',
+    image: 'assets/fun.gif',
+    // image: 'https://media3.giphy.com/media/3ohzAOyCNCfzS0m2FW/source.gif',
     projects: [
       {
         category: 'fun',
@@ -35,7 +36,8 @@ const DECENT_PROJECTS = [
   },
   {
     catName: 'crypto',
-    image: 'https://media3.giphy.com/media/l49JMVDvP8D38LHwI/giphy.gif',
+    image: 'assets/fun.gif',
+    // image: 'https://media3.giphy.com/media/l49JMVDvP8D38LHwI/giphy.gif',
     projects: [
       {
         category: 'crypto',
@@ -62,7 +64,8 @@ const DECENT_PROJECTS = [
   },
   {
     catName: 'hardware',
-    image: 'https://thumbs.gfycat.com/AdoredGraveAfricangoldencat-max-1mb.gif',
+    image: 'assets/fun.gif',
+    // image: 'https://thumbs.gfycat.com/AdoredGraveAfricangoldencat-max-1mb.gif',
     projects: [
       {
         category: 'hardware',
