@@ -1,7 +1,8 @@
 const DECENT_PROJECTS = [
   {
     catName: 'fun',
-    image: 'assets/fun.gif',
+    image: null,
+    // image: 'assets/fun.gif',
     // image: 'https://media3.giphy.com/media/3ohzAOyCNCfzS0m2FW/source.gif',
     projects: [
       {
@@ -9,16 +10,19 @@ const DECENT_PROJECTS = [
         name: 'ticking',
         url: 'https://ticking.app',
         image: 'assets/exp-ticking.png',
-        desc: 'Ticking is an iPhone app to improve your timing on the drums'
+        desc: 'Ticking is an iPhone app to improve your timing on the drums',
+        logo: 'assets/projects/logos/cryptoClimber.png'
       },
       {
         category: 'fun',
         name: 'music generator',
         url: 'https://decentlabs.github.io/music_generator/',
         image: 'assets/exp-musicgenerator.png',
-        desc: "A music generator for creatives by adjusting mood and intensity along a video's timeline."
+        desc: "A music generator for creatives by adjusting mood and intensity along a video's timeline.",
+        logo: 'assets/projects/logos/cryptoClimber.png'
       },
       {
+        logo: 'assets/projects/logos/cryptoClimber.png',
         category: 'fun',
         name: 'terraforming earth',
         url: 'http://www.terraforming.earth/',
@@ -26,6 +30,7 @@ const DECENT_PROJECTS = [
         desc: 'Terraforming Earth is a platform puzzler set in the not-so-distant future when one day all life disappears from the Solar System'
       },
       {
+        logo: 'assets/projects/logos/cryptoClimber.png',
         category: 'fun',
         name: 'crypto climber',
         url: 'https://cryptoclimber.decent.org/',
@@ -36,10 +41,12 @@ const DECENT_PROJECTS = [
   },
   {
     catName: 'crypto',
-    image: 'assets/fun.gif',
+    image: null,
+    // image: 'assets/fun.gif',
     // image: 'https://media3.giphy.com/media/l49JMVDvP8D38LHwI/giphy.gif',
     projects: [
       {
+        logo: 'assets/projects/logos/cryptoClimber.png',
         category: 'crypto',
         name: 'Cryptoposition',
         url: null,
@@ -47,6 +54,7 @@ const DECENT_PROJECTS = [
         desc: 'A hedge fund specialized in crypto assets and algorithmic trading'
       },
       {
+        logo: 'assets/projects/logos/cryptoClimber.png',
         category: 'crypto',
         name: 'augmint',
         url: 'https://www.augmint.org/',
@@ -54,6 +62,7 @@ const DECENT_PROJECTS = [
         desc: 'Augmint offers digital tokens targeted to a fiat currency. Stored securely and decentralised stable crypto tokens are instantly transferable worldwide'
       },
       {
+        logo: 'assets/projects/logos/cryptoClimber.png',
         category: 'crypto',
         name: 'proof of love',
         url: 'https://proofoflove.digital/',
@@ -64,10 +73,12 @@ const DECENT_PROJECTS = [
   },
   {
     catName: 'hardware',
-    image: 'assets/fun.gif',
+    image: null,
+    // image: 'assets/fun.gif',
     // image: 'https://thumbs.gfycat.com/AdoredGraveAfricangoldencat-max-1mb.gif',
     projects: [
       {
+        logo: 'assets/projects/logos/cryptoClimber.png',
         category: 'hardware',
         name: 'Battlab',
         url: null,
@@ -75,6 +86,7 @@ const DECENT_PROJECTS = [
         desc: 'Mobile, battery powered laboratory power supply, with logging and measurement automation features'
       },
       {
+        logo: 'assets/projects/logos/cryptoClimber.png',
         category: 'hardware',
         name: 'Super secret',
         url: null,

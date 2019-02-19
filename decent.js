@@ -9,7 +9,7 @@ let animations = []
 init()
 
 function init () {
-  header.style.setProperty('height', '700px')
+  // header.style.setProperty('height', '700px')
   header.style.setProperty('height', height + 'px')
   templating ()
   resize()
@@ -18,23 +18,25 @@ function init () {
 }
 
 function templating () {
-  console.log(DECENT_PROJECTS);
+
   let grid = document.querySelector('.category-grid')
   let gridContent = ''
 
   DECENT_PROJECTS.forEach((category) => {
-    let categoryBox = `
-      <div class="experiment-item category-type">
-        <img src="${category.image}">
-        <h3>${category.catName}</h3>
-      </div>
-    `
-    gridContent += categoryBox
+    // let categoryBox = `
+    //   <div class="experiment-item category-type">
+    //     <img src="${category.image}">
+    //     <h3>${category.catName}</h3>
+    //   </div>
+    // `
+    // gridContent += categoryBox
 
     category.projects.forEach((project) => {
+      // <img class="project-logo" src="${project.logo}"></img>
       let template = `
         <div class="experiment-item">
           <div class="overlay">
+
             <p>${project.desc ? project.desc : ''}</p>
           </div>
 
@@ -66,15 +68,30 @@ function hover () {
     })
     let node = item.children[index]
 
+    item.addEventListener('touchstart', () => {
+      console.log('touch');
+      if (node) {
+        let color = colors[Math.round(Math.random() * colors.length-1)]
+        node.style.backgroundColor = color + 'F2'
+        node.style.opacity = '1'
+      }
+    })
+
     item.addEventListener('mouseover', () => {
       if (node) {
         let color = colors[Math.round(Math.random() * colors.length-1)]
-        node.style.backgroundColor = color
+        node.style.backgroundColor = color + 'F2'
         node.style.opacity = '1'
       }
     })
 
     item.addEventListener('mouseout', () => {
+      if (node) {
+        node.style.opacity = '0'
+      }
+    })
+
+    item.addEventListener('touchend', () => {
       if (node) {
         node.style.opacity = '0'
       }
@@ -86,8 +103,7 @@ function resize () {
   window.addEventListener('resize', () => {
     width = window.innerWidth
     // height = width / ratio
-    // header.style.setProperty('height', height + 'px')
-    header.style.setProperty('height', '700px')
+    header.style.setProperty('height', height + 'px')
     animations.forEach((anim) => {
       anim.update()
     })

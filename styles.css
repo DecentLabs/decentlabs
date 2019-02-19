@@ -15,7 +15,7 @@ body {
   color: var(--text-color);
   font-family: 'century-gothic', sans-serif;
   overflow-x: hidden;
-  /* background-color: black; */
+  text-align: center;
 }
 
 body * {
@@ -35,6 +35,7 @@ h1 span, h2 span, h3 span {
   width: 100%;
   height: 100%;
   display: inline-block;
+  filter: grayscale(100%);
 }
 
 a, a:visited {
@@ -170,11 +171,11 @@ header {
   top: 56%;
 }
 
-#main-nav a:hover {
+/* #main-nav a:hover {
   font-size: 36px;
   opacity: 1;
   color: #4CC1E5;
-}
+} */
 #main-nav a:active {
   color: white;
 }
@@ -189,7 +190,7 @@ section {
   line-height: 60px;
   font-weight: 700;
   text-align: center;
-  margin: 0 0 60px;
+  margin: 0 auto 60px auto;
 }
 
 #intro {
@@ -211,15 +212,15 @@ section {
 }
 
 #intro p b {
-  background-color: var(--orange);
+  background-color: var(--black);
   font-size: 38px;
   padding: 0 5px 0 5px;
-  color: white;
+  color: var(--orange);
   border-radius: 4px;
 }
 
 #intro p:last-of-type {
-  margin: 40px 0 0 auto;
+  margin-top: 40px;
 }
 #intro p span:hover {
   color: #40b3a3;
@@ -227,11 +228,16 @@ section {
 
 section#experiments {
   background-color: var(--orange);
-  padding: 60px var(--gap-size) 60px var(--gap-size);
+  padding: 60px var(--gap-size) 0 var(--gap-size);
 }
 
 #experiments h1 {
   color: white;
+}
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .category-grid {
@@ -242,8 +248,8 @@ section#experiments {
 }
 
 .category-grid .experiment-item {
-  height: calc(100vw / 3 - ((2 * var(--gap-size)) / 3) - 20px);
-  width: calc(100vw / 3 - ((2 * var(--gap-size)) / 3) - 20px);
+  height: calc((100vw / 3) - ((4 * var(--gap-size)) / 3));
+  width: calc((100vw / 3) - ((4 * var(--gap-size)) / 3));
   margin-left: calc((2 * var(--gap-size)) / 4);
   margin-right: calc((2 * var(--gap-size)) / 4);
   margin-bottom: var(--gap-size);
@@ -254,10 +260,6 @@ section#experiments {
 }
 .category-grid .experiment-item:nth-of-type(3n) {
   margin-right: 0;
-}
-.category-grid .experiment-item:nth-of-type(3n+1).highlighted {
-  width: 100%;
-  height: calc(100vh - 4 * var(--gap-size));
 }
 
 .experiment-item h3 {
@@ -278,16 +280,23 @@ section#experiments {
 }
 
 .experiment-item p {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 15px;
+  padding: 15px 30px 15px 30px;
   margin: 0;
   z-index: 2;
   color: #fff;
   letter-spacing: 0.01em;
-  background-color: var(--darkgrey);
+  font-size: 24px;
+  text-align: center;
+}
+.experiment-item .overlay img {
+  width: 100px;
+  height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .more-link {
@@ -295,7 +304,7 @@ section#experiments {
     height: 100%;
 }
 
-.more-link::after:hover {
+.more-link:after:hover {
   background-color: var(--lightgrey);
   border-color: var(--lightgrey);
 }
@@ -324,45 +333,56 @@ section#experiments {
 }
 
 #divider {
-  max-width: 100%;
+  width: 100%;
 }
 
 #divider p {
   padding: 60px 20px 60px 20px;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 1.4em;
   font-style: italic;
   color: black;
   letter-spacing: 0.03em;
   margin: auto;
+  width: 80%;
+  text-align: center;
 }
 
 #happenings {
-  /* background-color: black; */
-  /* background-color: var(--orange); */
   background-color: white;
-  background-image: url('./assets/grid_alpha.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center top;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #happenings h1 {
   margin-bottom: 0;
+  background-color: var(--black);
+  border-radius: 5px;
+  padding: 5px 8px 8px 8px;
+  display: inline-block;
 }
 
 #event-upcoming {
   position: relative;
-  padding: 20px;
   box-sizing: border-box;
+  position: relative;
+  background-image: url('./assets/form_bg_2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: var(--gap-size);
+  margin-right: var(--gap-size);
 }
 
 .events-content {
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: auto;
-  padding: 120px 60px 60px 60px;
+  height: 520px;
 }
 
 #event-upcoming .form-column {
@@ -371,16 +391,14 @@ section#experiments {
   display: inline-block;
   height: 400px;
   width: 400px;
-  border-radius: 50%;
+  border-radius: 100%;
+  z-index: 5;
 }
 
 #event-upcoming h2, #event-past h2 {
-  color: white;
+  color: black;
   width: auto;
   font-size: 40px;
-  background-color: var(--black);
-  border-radius: 5px;
-  padding: 5px 8px 8px 8px;
   display: inline-block;
 }
 
@@ -391,7 +409,7 @@ section#experiments {
 }
 
 #event-past h2 {
-  margin: 60px auto 60px auto;
+  margin: 0 auto 60px auto;
   text-align: center;
 }
 
@@ -509,10 +527,10 @@ section#experiments {
 }
 
 .event {
-  margin: 0 20px 60px 20px;
+  margin: 0 var(--gap-size) 0 var(--gap-size);
   overflow: hidden;
   text-align: left;
-  /* position: relative; */
+  position: relative;
 }
 
 .event:only-child {
@@ -520,17 +538,15 @@ section#experiments {
 }
 
 .event h3 {
-  /* position: absolute; */
-  /* left: 0;
-  top: 0; */
   font-size: 30px;
-  /* line-height: 30px; */
   font-weight: normal;
   display: inline-block;
-  color: white;
-  background-color: var(--orange);
+  display: block;
+  color: black;
+  background-color: white;
   padding: 5px 10px 5px 8px;
   margin: 0;
+  z-index: 5;
 }
 
 .event .img-row {
@@ -543,6 +559,9 @@ section#experiments {
   position: relative;
   height: 100%;
   flex: 1 1 auto;
+}
+.event .img-row .event-img img {
+  filter: grayscale(100%);
 }
 
 .event .img-row.four .event-img {
@@ -562,23 +581,26 @@ section#experiments {
   opacity: 0;
   transition: opacity .2s;
   pointer-events: none;
-  /* background-image: url('assets/cover_alpha.png'); */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: color-burn;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--black);
 }
+
+/* .experiment-item:hover .overlay {
+  opacity: 1;
+} */
 
 footer {
   position: relative;
-  height: 160px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   background-color: var(--black);
+  margin-top: var(--gap-size);
 }
-
 
 .footer-inner {
   width: 100%;
