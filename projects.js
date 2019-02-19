@@ -18,7 +18,7 @@ const DECENT_PROJECTS = [
         name: 'music generator',
         url: 'https://decentlabs.github.io/music_generator/',
         image: 'assets/exp-musicgenerator.png',
-        desc: "A music generator for creatives by adjusting mood and intensity along a video's timeline.",
+        desc: "A music generator for creatives by adjusting mood and intensity along a video's timeline",
         logo: 'assets/projects/logos/cryptoClimber.png'
       },
       {
@@ -84,6 +84,14 @@ const DECENT_PROJECTS = [
         url: null,
         image: 'assets/exp-battlab.jpeg',
         desc: 'Mobile, battery powered laboratory power supply, with logging and measurement automation features'
+      },
+      {
+        logo: 'assets/projects/logos/cryptoClimber.png',
+        category: 'hardware',
+        name: 'Revolution Robotics',
+        url: 'https://www.revolutionrobotics.org/',
+        image: 'assets/revolutionRobotics.jpeg',
+        desc: 'Revolution Robotics is revolutionizing STEM education by making robotics challenges and competitions accessible and enjoyable to kids globally'
       },
       {
         logo: 'assets/projects/logos/cryptoClimber.png',

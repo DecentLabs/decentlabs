@@ -54,7 +54,7 @@ class Animation {
   }
 
   updateSize () {
-    let newSize = Math.round(Math.random() * (width * 0.3) + (width * 0.25))
+    let newSize = Math.round(Math.random() * (height * 0.3) + (height * 0.2))
     let pos = this.size/2 - newSize/2
     this.size = newSize
     this.x += pos

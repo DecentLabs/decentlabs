@@ -82,6 +82,8 @@ function hover () {
         let color = colors[Math.round(Math.random() * colors.length-1)]
         node.style.backgroundColor = color + 'F2'
         node.style.opacity = '1'
+        console.log(node);
+        console.log(node.style.backgroundColor);
       }
     })
 
