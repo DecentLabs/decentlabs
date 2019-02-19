@@ -17,6 +17,8 @@
   }
   #hero-title {
     max-width: 100%;
+    margin-left: 30px;
+    margin-top: 40px;
   }
 
   #hero-title h1 {
@@ -35,7 +37,7 @@
     text-align: center;
   }
   section#intro {
-    padding: 60px;
+    padding: 40px;
   }
   section#intro p {
     font-size: 19px;
@@ -51,6 +53,10 @@
     font-size: 36px;
     padding-top: 36px;
     margin-bottom: 36px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    line-height: 100%;
   }
 
   .category {
@@ -169,7 +175,7 @@
     object-position: top;
   }
   #divider {
-    padding: 60px;
+    padding: 40px;
     padding-bottom: 30px;
   }
   #divider p {
