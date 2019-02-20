@@ -6,7 +6,7 @@ const DECENT_PROJECTS = [
     // image: 'https://media3.giphy.com/media/3ohzAOyCNCfzS0m2FW/source.gif',
     projects: [
       {
-        category: 'fun',
+        hashtag: '#fun',
         name: 'ticking',
         url: 'https://ticking.app',
         image: 'assets/exp-ticking.png',
@@ -14,7 +14,7 @@ const DECENT_PROJECTS = [
         logo: 'assets/projects/logos/cryptoClimber.png'
       },
       {
-        category: 'fun',
+        hashtag: '#fun',
         name: 'music generator',
         url: 'https://decentlabs.github.io/music_generator/',
         image: 'assets/exp-musicgenerator.png',
@@ -23,7 +23,7 @@ const DECENT_PROJECTS = [
       },
       {
         logo: 'assets/projects/logos/cryptoClimber.png',
-        category: 'fun',
+        hashtag: '#fun',
         name: 'terraforming earth',
         url: 'http://www.terraforming.earth/',
         image: 'assets/exp-terraforming.jpeg',
@@ -31,10 +31,10 @@ const DECENT_PROJECTS = [
       },
       {
         logo: 'assets/projects/logos/cryptoClimber.png',
-        category: 'fun',
+        hashtag: '#fun #crypto',
         name: 'crypto climber',
         url: 'https://cryptoclimber.decent.org/',
-        image: 'assets/cryptoClimber.png',
+        image: 'assets/projects/cryptoClimber.png',
         desc: 'How good are you at trending a 30 day sample of historical Bitcoin prices?'
       }
     ]
@@ -47,7 +47,7 @@ const DECENT_PROJECTS = [
     projects: [
       {
         logo: 'assets/projects/logos/cryptoClimber.png',
-        category: 'crypto',
+        hashtag: '#crypto',
         name: 'Cryptoposition',
         url: null,
         image: 'assets/exp-cryptoposition.jpg',
@@ -55,7 +55,7 @@ const DECENT_PROJECTS = [
       },
       {
         logo: 'assets/projects/logos/cryptoClimber.png',
-        category: 'crypto',
+        hashtag: '#crypto',
         name: 'augmint',
         url: 'https://www.augmint.org/',
         image: 'assets/exp-augmint.png',
@@ -63,7 +63,7 @@ const DECENT_PROJECTS = [
       },
       {
         logo: 'assets/projects/logos/cryptoClimber.png',
-        category: 'crypto',
+        hashtag: '#crypto',
         name: 'proof of love',
         url: 'https://proofoflove.digital/',
         image: 'assets/exp-proofoflove.jpeg',
@@ -79,7 +79,7 @@ const DECENT_PROJECTS = [
     projects: [
       {
         logo: 'assets/projects/logos/cryptoClimber.png',
-        category: 'hardware',
+        hashtag: '#hardware',
         name: 'Battlab',
         url: null,
         image: 'assets/exp-battlab.jpeg',
@@ -87,7 +87,7 @@ const DECENT_PROJECTS = [
       },
       {
         logo: 'assets/projects/logos/cryptoClimber.png',
-        category: 'hardware',
+        hashtag: '#hardware',
         name: 'Revolution Robotics',
         url: 'https://www.revolutionrobotics.org/',
         image: 'assets/revolutionRobotics.jpeg',
@@ -95,7 +95,7 @@ const DECENT_PROJECTS = [
       },
       {
         logo: 'assets/projects/logos/cryptoClimber.png',
-        category: 'hardware',
+        hashtag: '#supersecret',
         name: 'Super secret',
         url: null,
         image: 'assets/exp-comingsoon.svg',

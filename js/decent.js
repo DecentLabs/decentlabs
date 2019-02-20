@@ -1,6 +1,6 @@
 const header = document.querySelector('header')
 const ratio = 2.585
-const colors = ['#e8a87c','#c38d9e','#8bcbc8','#40b3a3', '#4CC1E5']
+const colors = ['#e8a87c','#c38d9e','#8bcbc8','#40b3a3', '#e27d60']
 let width = window.innerWidth
 let height = 700
 // let height = width / ratio
@@ -50,6 +50,7 @@ function templating () {
               ${project.name}
             </a>` : project.name}
           </h3>
+          <div class="label">${project.hashtag}</div>
         </div>
       `
       gridContent += template
@@ -72,7 +73,8 @@ function hover () {
     item.addEventListener('touchstart', () => {
       if (node) {
         let color = colors[Math.round(Math.random() * colors.length-1)]
-        node.style.backgroundColor = color + 'F2'
+        // node.style.backgroundColor = color + 'F2'
+        node.style.backgroundColor = color
         node.style.opacity = '1'
       }
     })
@@ -82,8 +84,6 @@ function hover () {
         let color = colors[Math.round(Math.random() * colors.length-1)]
         node.style.backgroundColor = color + 'F2'
         node.style.opacity = '1'
-        console.log(node);
-        console.log(node.style.backgroundColor);
       }
     })
 
