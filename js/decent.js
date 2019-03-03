@@ -1,17 +1,18 @@
 const header = document.querySelector('header')
 const ratio = 2.585
 const colors = ['#e8a87c','#c38d9e','#8bcbc8','#40b3a3', '#e27d60']
-let width = window.innerWidth
-let height = 700
-// let height = width / ratio
-// let height = 700 = document.querySelector('header')
 let animations = []
+let width = window.innerWidth
+let height = 768
 
 init()
 
 function init () {
-  // header.style.setProperty('height', '700px')
-  // header.style.setProperty('height', height + 'px')
+  if (width <= 599 && width < 1024) {
+    height = 568
+  }
+  header.style.setProperty('height', height + 'px')
+
   templating ()
   resize()
   createBubbles()
@@ -19,7 +20,6 @@ function init () {
 }
 
 function templating () {
-
   let grid = document.querySelector('.category-grid')
   let gridContent = ''
 
@@ -37,7 +37,6 @@ function templating () {
       let template = `
         <div class="experiment-item">
           <div class="overlay">
-
             <p>${project.desc ? project.desc : ''}</p>
           </div>
 
@@ -73,7 +72,6 @@ function hover () {
     item.addEventListener('touchstart', () => {
       if (node) {
         let color = colors[Math.round(Math.random() * colors.length-1)]
-        // node.style.backgroundColor = color + 'F2'
         node.style.backgroundColor = color
         node.style.opacity = '1'
       }
@@ -82,7 +80,7 @@ function hover () {
     item.addEventListener('mouseover', () => {
       if (node) {
         let color = colors[Math.round(Math.random() * colors.length-1)]
-        node.style.backgroundColor = color + 'F2'
+        node.style.backgroundColor = color
         node.style.opacity = '1'
       }
     })
@@ -104,7 +102,10 @@ function hover () {
 function resize () {
   window.addEventListener('resize', () => {
     width = window.innerWidth
-    // header.style.setProperty('height', height + 'px')
+    if (width <= 599 && width < 1024) {
+      height = 568
+    }
+    header.style.setProperty('height', height + 'px')
     animations.forEach((anim) => {
       anim.update()
     })

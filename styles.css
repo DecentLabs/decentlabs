@@ -11,7 +11,6 @@
   --pink: #c38d9e;
   --row-height: 520px;
   --gap-size: 20px;
-  --form-size: 420px;
 }
 
 body {
@@ -60,7 +59,6 @@ img {
 
 header {
   position: relative;
-  /* background-color: rgb(200, 50, 180); */
   background-color: white;
   overflow: hidden;
   background-image: url('./assets/cover_alpha.png');
@@ -68,8 +66,6 @@ header {
   background-size: cover;
   background-position: center;
   height: 700px;
-  /* filter: invert(100%); */
-  /* background-size: 150%; */
 }
 
 #hero-title {
@@ -114,7 +110,6 @@ header {
   height: 100%;
   opacity: 0.7;
   mix-blend-mode: multiply;
-  /* background-image: linear-gradient(to right top, #c38d9e, #ae93bf, #7ca1d3, #3badca, #40b3a3) */
 }
 
 .bubble {
@@ -182,6 +177,7 @@ header {
   opacity: 1;
   color: #4CC1E5;
 } */
+
 #main-nav a:active {
   color: white;
 }
@@ -233,8 +229,7 @@ section {
 }
 
 section#experiments {
-  background-image: linear-gradient(to bottom, #ee4036, #eb533f, #e96349, #e57154, #e27d60);
-  //background-color: var(--mediumorange);
+  background-color: var(--orange);
   padding: 60px var(--gap-size) 0 var(--gap-size);
 }
 
@@ -373,14 +368,6 @@ section#experiments {
   position: relative;
   box-sizing: border-box;
   position: relative;
-  /* background-image: url('./assets/form_bg_2.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center; */
-  /* padding-top: 60px;
-  padding-bottom: 60px; */
-  /* margin-left: var(--gap-size);
-  margin-right: var(--gap-size); */
   background-color: var(--orange);
 }
 
@@ -410,14 +397,8 @@ section#experiments {
 #event-upcoming h2, #event-past h2 {
   color: black;
   width: auto;
-  font-size: 40px;
+  font-size: 36px;
   display: inline-block;
-}
-
-#event-upcoming h2 {
-  position: absolute;
-  top: 60px;
-  left: 120px;
 }
 
 #event-past h2 {
@@ -536,11 +517,9 @@ section#experiments {
 #event-past {
   margin-top: 60px;
   text-align: center;
-  background-image: linear-gradient(to bottom, #ee4036, #eb533f, #e96349, #e57154, #e27d60);
 }
 
 .event {
-  margin: 0 var(--gap-size) 0 var(--gap-size);
   overflow: hidden;
   text-align: left;
   position: relative;
@@ -552,6 +531,7 @@ section#experiments {
 
 .event h3 {
   font-size: 30px;
+  line-height: 150%;
   font-weight: normal;
   display: inline-block;
   display: block;
@@ -566,7 +546,6 @@ section#experiments {
   display: flex;
   height: 420px;
   background-color: var(--black);
-  /* border: 3px solid var(--orange); */
 }
 
 .event .img-row .event-img {
@@ -606,8 +585,6 @@ section#experiments {
   right: 5px;
   color: white;
   font-size: 21px;
-  /* background-color: var(--black);
-  border-radius: 5px; */
   padding-right: 5px;
   padding-left: 5px;
   padding-bottom: 5px;
@@ -630,9 +607,7 @@ footer {
   padding: 0 60px;
   box-sizing: border-box;
   text-align: right;
-  /* background-color: black; */
 }
-
 
 footer p,
 footer a {
@@ -669,5 +644,4 @@ footer a:hover {
 footer img.icon-link {
   width: 40px;
   height: 40px;
-  /* border: 1px solid var(--black); */
 }
