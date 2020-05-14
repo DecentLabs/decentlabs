@@ -3,7 +3,7 @@ const email = document.querySelector('#subscribe-form input[name="email"]')
 
 button.addEventListener('click', e => {
   e.preventDefault()
-  const macro = 'https://script.google.com/macros/s/AKfycbz7dH_CBshOK2O2ngctNHlDvkGioeaIH6-4aoIJJXag_H_KRc5h/exec'
+  const macro = 'https://script.google.com/macros/s/AKfycbwDd_e0hXCszwt6mJaMuMHHsxndEkzKbkXmRCdHyHOaLnfwxdE/exec'
   const url = `${macro}?email=${encodeURIComponent(email.value)}`
 
   if (email.value) {
