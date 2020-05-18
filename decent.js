@@ -3,15 +3,11 @@ const ratio = 2.585
 const colors = ['#e8a87c','#c38d9e','#8bcbc8','#40b3a3', '#4CC1E5']
 let width = window.innerWidth
 let height = 700
-// let height = width / ratio
-// let height = 700 = document.querySelector('header')
 let animations = []
 
 init()
 
 function init () {
-  // header.style.setProperty('height', '700px')
-  // header.style.setProperty('height', height + 'px')
   templating ()
   resize()
   createBubbles()
@@ -23,37 +19,26 @@ function templating () {
   let grid = document.querySelector('.category-grid')
   let gridContent = ''
 
-  DECENT_PROJECTS.forEach((category) => {
-    // let categoryBox = `
-    //   <div class="experiment-item category-type">
-    //     <img src="${category.image}">
-    //     <h3>${category.catName}</h3>
-    //   </div>
-    // `
-    // gridContent += categoryBox
+  DECENT_PROJECTS.forEach((project) => {
+    let template = `
+      <div class="experiment-item">
+        <div class="overlay">
 
-    category.projects.forEach((project) => {
-      // <img class="project-logo" src="${project.logo}"></img>
-      let template = `
-        <div class="experiment-item">
-          <div class="overlay">
-
-            <p>${project.desc ? project.desc : ''}</p>
-          </div>
-
-          ${project.url ? `<a class="img-link" href="${project.url}" target="_blank">
-            <img src="${project.image}">
-          </a>` : `<img src="${project.image}">`}
-
-          <h3>
-            ${project.url ? `<a class="more-link left" href="${project.url}" target="_blank">
-              ${project.name}
-            </a>` : project.name}
-          </h3>
+          <p>${project.desc ? project.desc : ''}</p>
         </div>
-      `
-      gridContent += template
-    })
+
+        ${project.url ? `<a class="img-link" href="${project.url}" target="_blank">
+          <img src="${project.image}">
+        </a>` : `<img src="${project.image}">`}
+
+        <h3>
+          ${project.url ? `<a class="more-link left" href="${project.url}" target="_blank">
+            ${project.name}
+          </a>` : project.name}
+        </h3>
+      </div>
+    `
+    gridContent += template
   })
   grid.innerHTML = gridContent
 }
