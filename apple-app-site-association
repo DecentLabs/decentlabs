@@ -1,5 +1,7 @@
-{
-  "appclips": {
-    "apps": ["ABCED12345.org.decent.Decent-app.Clip"]
+"applinks": {
+  {
+    "appclips": {
+      "apps": ["ABCED12345.org.decent.Decent-app.Clip"]
+    }
   }
 }
