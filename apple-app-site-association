@@ -1,9 +1,5 @@
 {
-  "applinks": {
-    {
-      "appclips": {
-        "apps": ["23925A9633.org.decent.Decent-app.Clip"]
-      }
-    }
+  "appclips": {
+    "apps": ["23925A9633.org.decent.Decent-app.Clip"]
   }
 }
