@@ -18,19 +18,41 @@
   <link rel="icon" href="assets/favicon.png">
   <link rel="stylesheet" href="https://use.typekit.net/rur6itt.css">
   <link rel="stylesheet" href="https://use.typekit.net/rur6itt.css">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="art.css">
-  <link rel="stylesheet" href="stylesMobile.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/art.css">
+  <link rel="stylesheet" href="styles/stylesMobile.css">
 </head>
 
 <body id="art-body">
+  <header id="header" class="small">
+
+    <div class="bubbles">
+      <div class="bubble bubble-1"></div>
+      <div class="bubble bubble-2"></div>
+    </div>
+
+    <div id="hero-title">
+      <h1>decent</h1><br>
+      <h6>ART</h6>
+    </div>
+  </header>
+
   <main id ="art">
-    <h1>DECENT ART</h1>
 
     <div class="images">
-      <img src="assets/art1.jpg" alt="">
-      <img src="assets/art2.jpg" alt="">
+      <div class="art art-1" data-art="1">
+        <h2>Art 1</h2>
+        <p class="description">Description comes here...</p>
+        <img src="assets/art1.jpg" alt="decent art 1">
+      </div>
+      <div class="art art-2" data-art="2">
+        <h2>Art 2</h2>
+        <p class="description">Description comes here...</p>
+        <img src="assets/art2.jpg" alt="decent art 2">
+      </div>
     </div>
+
+    <p class="show-all">Show all</p>
   </main>
 
 <footer id="contact">
@@ -44,9 +66,9 @@
   </div>
   <img class="footer-bg" src="assets/footer-halftone.svg">
 </footer>
-<script src="projects.js"></script>
-<script src="bubble.js"></script>
-<script src="decent.js"></script>
-<script src="subscribe.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/art.js"></script>
+<script src="js/bubble.js"></script>
+<script src="js/decent.js"></script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+#art {
+  min-height: 90vh;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 25px 0 10px;
+}
+
+.show-all {
+  color: rgb(200, 80, 200);
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  padding: 5%;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+}
+
+.images h2 {
+  color: #EE4036;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.images .art {
+  width: 45%;
+}
+
+.images .art .description {
+  display: none;
+  font-size: 1.2em;
+  color: lightgrey;
+}
+
+.images .art.full {
+  width: 100%;
+}
+
+.images .art.full h2 {
+  font-size: 2em;
+}
+
+.images .art.full .description {
+  display: inline-block;
+}
+
+.images img {
+  width: 100%;
+  border: 1px solid black;
+  height: auto;
+}

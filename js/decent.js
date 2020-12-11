@@ -17,30 +17,32 @@ function init () {
 function templating () {
 
   let grid = document.querySelector('.category-grid')
-  let gridContent = ''
+  if (grid) {
+    let gridContent = ''
 
-  DECENT_PROJECTS.forEach((project) => {
-    let template = `
-      <div class="experiment-item">
-        <div class="overlay">
+    DECENT_PROJECTS.forEach((project) => {
+      let template = `
+        <div class="experiment-item">
+          <div class="overlay">
 
-          <p>${project.desc ? project.desc : ''}</p>
+            <p>${project.desc ? project.desc : ''}</p>
+          </div>
+
+          ${project.url ? `<a class="img-link" href="${project.url}" target="_blank">
+            <img src="${project.image}">
+          </a>` : `<img src="${project.image}">`}
+
+          <h3>
+            ${project.url ? `<a class="more-link left" href="${project.url}" target="_blank">
+              ${project.name}
+            </a>` : project.name}
+          </h3>
         </div>
-
-        ${project.url ? `<a class="img-link" href="${project.url}" target="_blank">
-          <img src="${project.image}">
-        </a>` : `<img src="${project.image}">`}
-
-        <h3>
-          ${project.url ? `<a class="more-link left" href="${project.url}" target="_blank">
-            ${project.name}
-          </a>` : project.name}
-        </h3>
-      </div>
-    `
-    gridContent += template
-  })
-  grid.innerHTML = gridContent
+      `
+      gridContent += template
+    })
+    grid.innerHTML = gridContent
+  }
 }
 
 function hover () {
